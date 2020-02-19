@@ -82,7 +82,7 @@ class SignUpViewController: UIViewController {
             Auth.auth().createUser(withEmail: email , password: password) { (result, err) in
                 
                 // CHeck for errors
-                if let err = err {
+                if err != nil {
                     self.showError("Error creating user")
                 }
                 else {
