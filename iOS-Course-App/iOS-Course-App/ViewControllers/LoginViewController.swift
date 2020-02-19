@@ -52,8 +52,9 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToCoursesVC() {
-        guard let coursesVC = self.storyboard?.instantiateViewController(identifier: "CoursesVC") as? CoursesViewController else {return}
-        self.navigationController?.pushViewController(coursesVC, animated: true)
+        guard let TabBarCoursesVC = self.storyboard?.instantiateViewController(identifier: "TabBarCourses") as? TabBarViewController else {return}
+        TabBarCoursesVC.selectedViewController = TabBarCoursesVC.viewControllers?[1]
+        self.navigationController?.pushViewController(TabBarCoursesVC, animated: true)
     }
     
     @IBAction func logInButtonTapped(_ sender: Any) {

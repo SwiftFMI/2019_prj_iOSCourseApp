@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAnalytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
