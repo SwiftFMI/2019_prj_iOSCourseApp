@@ -12,6 +12,9 @@ struct Courses {
     let courseTitle: String
 }
 
+
+var myIndex = 0
+
 class CurrentTableView : UIViewController{
     @IBOutlet weak var currTable: UITableView!
 
@@ -25,12 +28,7 @@ class CurrentTableView : UIViewController{
     }
     
     func loadDataSource() {
-        dataSource.append(Courses(courseTitle: "iOS Course App"))
-        dataSource.append(Courses(courseTitle: "iOS Course App"))
-        dataSource.append(Courses(courseTitle: "iOS Course App"))
-        dataSource.append(Courses(courseTitle: "iOS Course App"))
-        dataSource.append(Courses(courseTitle: "iOS Course App"))
-        dataSource.append(Courses(courseTitle: "iOS Course App"))
+        dataSource.append(Courses(courseTitle: "iOS with Swift 2019/2020"))
     }
 }
 
@@ -50,6 +48,13 @@ extension CurrentTableView: UITableViewDataSource, UITableViewDelegate {
         let course = dataSource[indexPath.row]
         currCell.textLabel?.text = course.courseTitle
         return currCell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: indexPath){
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "segueToProjects" ,sender: self)
+        
+        
     }
 }
 
