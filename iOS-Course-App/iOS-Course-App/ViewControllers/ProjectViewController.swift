@@ -20,6 +20,8 @@ class ProjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupElements()
+        self.title = "Project"
+
     }
     
     func setupElements() {

@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
-
+        self.title = "Login"
         self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
