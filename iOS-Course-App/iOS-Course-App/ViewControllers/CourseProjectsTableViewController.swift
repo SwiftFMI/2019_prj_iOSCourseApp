@@ -37,7 +37,23 @@ class CourseProjectsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "project", for: indexPath)
         cell.textLabel?.text = projects?[indexPath.row].name
+        cell.imageView?.image = UIImage(named: "dev.png")
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         self.performSegue(withIdentifier: "projectDetailsSegue", sender:nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let index = tableView.indexPathForSelectedRow else {
+            return
+        }
+        let project = projects?[index.row]
+        (segue.destination as? ProjectViewController)?.projectInfo = project
+        
     }
     
 
