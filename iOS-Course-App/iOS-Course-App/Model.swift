@@ -21,6 +21,9 @@ struct Course {
 struct Model {
     let projects: Array<Project>
     let pastProjects: Array<Project>
+    let pastCourses: Array<Course>
+    let presentCourses: Array<Course>
+    let futureCourses: Array<Course>
     let courses: Array<Course>
 
     let pastProjectsYearOne = [
@@ -124,11 +127,14 @@ struct Model {
     init() {
         pastProjects = pastProjectsYearOne + pastProjectsYearTwo
         projects = pastProjects + presentProjects
-        courses = [
+        pastCourses = [
             Course(year: CourseYears().past[0], gitRepository: "https://github.com/SwiftFMI/iOS_2017_2018", projects: pastProjectsYearOne),
-            Course(year: CourseYears().past[1], gitRepository: "https://github.com/SwiftFMI/iOS_2018_2019", projects: pastProjectsYearTwo),
-            Course(year: CourseYears().present, gitRepository: "https://github.com/SwiftFMI/iOS_2019_2020", projects: presentProjects),
+            Course(year: CourseYears().past[1], gitRepository: "https://github.com/SwiftFMI/iOS_2018_2019", projects: pastProjectsYearTwo)]
+        presentCourses = [
+            Course(year: CourseYears().present, gitRepository: "https://github.com/SwiftFMI/iOS_2019_2020", projects: presentProjects)]
+        futureCourses = [
             Course(year: CourseYears().future, gitRepository:"https://github.com/SwiftFMI", projects: futureProjects)
         ]
+        courses = pastCourses + presentCourses + futureCourses
     }
 }
