@@ -23,7 +23,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
-
+        self.title = "Sign up"
         self.hideKeyboardWhenTappedAround() 
         // Do any additional setup after loading the view.
     }
