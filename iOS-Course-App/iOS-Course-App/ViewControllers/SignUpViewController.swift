@@ -24,6 +24,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         setUpElements()
 
+        self.hideKeyboardWhenTappedAround() 
         // Do any additional setup after loading the view.
     }
     func setUpElements() {

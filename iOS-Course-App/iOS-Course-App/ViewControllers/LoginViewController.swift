@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setUpElements()
 
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     func setUpElements() {
@@ -52,7 +53,7 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToCoursesVC() {
-        guard let coursesVC = self.storyboard?.instantiateViewController(identifier: "CoursesVC") as? CoursesViewController else {return}
+        guard let coursesVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {return}
         self.navigationController?.pushViewController(coursesVC, animated: true)
     }
     
@@ -94,3 +95,16 @@ class LoginViewController: UIViewController {
     */
 
 }
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
