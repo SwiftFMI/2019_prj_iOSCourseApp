@@ -19,6 +19,8 @@
 		6C08D07F23F96DC400E5F473 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C08D07E23F96DC300E5F473 /* Utilities.swift */; };
 		6C08D08123F9753700E5F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C08D08023F9753700E5F473 /* GoogleService-Info.plist */; };
 		6CD2EE3323FAB55A00F15CE6 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD2EE3223FAB55900F15CE6 /* CoursesViewController.swift */; };
+		E56EB2B223FD892200ADDA6D /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB2B123FD892200ADDA6D /* ProjectViewController.swift */; };
+		E56EB2B623FD8FC900ADDA6D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB2B523FD8FC900ADDA6D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		6C08D08023F9753700E5F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6CD2EE3223FAB55900F15CE6 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		B2D64C864F45310F71EE36C9 /* Pods_iOS_Course_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Course_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56EB2B123FD892200ADDA6D /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		E56EB2B523FD8FC900ADDA6D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 				6C08D06723F95C3E00E5F473 /* SceneDelegate.swift */,
 				6C08D06B23F95C3E00E5F473 /* Main.storyboard */,
 				6C08D07E23F96DC300E5F473 /* Utilities.swift */,
+				E56EB2B523FD8FC900ADDA6D /* Model.swift */,
 				6C08D06E23F95C4200E5F473 /* Assets.xcassets */,
 				6C08D07023F95C4200E5F473 /* LaunchScreen.storyboard */,
 				6C08D08023F9753700E5F473 /* GoogleService-Info.plist */,
@@ -102,6 +107,7 @@
 				6C08D07B23F95E5700E5F473 /* LoginViewController.swift */,
 				6C08D06923F95C3E00E5F473 /* ViewController.swift */,
 				6CD2EE3223FAB55900F15CE6 /* CoursesViewController.swift */,
+				E56EB2B123FD892200ADDA6D /* ProjectViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,6 +240,8 @@
 				6CD2EE3323FAB55A00F15CE6 /* CoursesViewController.swift in Sources */,
 				6C08D06A23F95C3E00E5F473 /* ViewController.swift in Sources */,
 				6C08D06623F95C3E00E5F473 /* AppDelegate.swift in Sources */,
+				E56EB2B623FD8FC900ADDA6D /* Model.swift in Sources */,
+				E56EB2B223FD892200ADDA6D /* ProjectViewController.swift in Sources */,
 				6C08D07A23F95E1500E5F473 /* SignUpViewController.swift in Sources */,
 				6C08D07C23F95E5700E5F473 /* LoginViewController.swift in Sources */,
 				6C08D06823F95C3E00E5F473 /* SceneDelegate.swift in Sources */,
@@ -384,6 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CBS4D3XVG5;
 				INFOPLIST_FILE = "iOS-Course-App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CBS4D3XVG5;
 				INFOPLIST_FILE = "iOS-Course-App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
