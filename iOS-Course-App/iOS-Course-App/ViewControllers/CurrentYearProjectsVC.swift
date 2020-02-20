@@ -27,6 +27,13 @@ class CurrentYearProjectsVC: UITableViewController {
         let project6 = Projects(image: "img6", title: "News Application")
         let project7 = Projects(image: "img7", title: "iOS Course Application")
         
+        projects.append(project1)
+        projects.append(project2)
+        projects.append(project3)
+        projects.append(project4)
+        projects.append(project5)
+        projects.append(project6)
+        projects.append(project7)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
