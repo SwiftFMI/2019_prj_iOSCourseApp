@@ -1,15 +1,16 @@
 //
-//  PastTableViewController.swift
+//  CourseProjectsTableViewController.swift
 //  iOS-Course-App
 //
-//  Created by grade on 20.02.20.
+//  Created by TsvetoslavVasev on 20.02.20.
 //  Copyright © 2020 TsvetoslavVasev. All rights reserved.
 //
 
 import UIKit
 
-class PastTableViewController: UITableViewController {
-
+class CourseProjectsTableViewController: UITableViewController {
+    
+    var projects: Array<Project>?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +22,7 @@ class PastTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -29,34 +30,30 @@ class PastTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Model().pastCourses.count
+        return projects?.count ?? 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "pastCell", for: indexPath)
-
-        let course = Model().pastCourses[indexPath.row]
-        cell.textLabel?.text = course.year
-        cell.imageView?.image = UIImage(named: "swift")
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "project", for: indexPath)
+        cell.textLabel?.text = projects?[indexPath.row].name
+        cell.imageView?.image = UIImage(named: "dev.png")
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         self.performSegue(withIdentifier: "projectsSegue", sender:nil)
+         self.performSegue(withIdentifier: "projectDetailsSegue", sender:nil)
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let index = tableView.indexPathForSelectedRow else {
             return
         }
-        let projects = Model().pastProjects[index.row]
-        (segue.destination as? CourseProjectsTableViewController)?.projects = projects
+        let project = projects?[index.row]
+        (segue.destination as? ProjectViewController)?.projectInfo = project
+        
     }
     
 

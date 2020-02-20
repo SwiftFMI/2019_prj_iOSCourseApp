@@ -43,6 +43,19 @@ class PresentCoursesTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         self.performSegue(withIdentifier: "projectsSegue", sender:nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let projects = Model().presentProjects
+        (segue.destination as? CourseProjectsTableViewController)?.projects = projects
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
