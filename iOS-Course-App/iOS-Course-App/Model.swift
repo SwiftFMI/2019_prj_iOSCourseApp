@@ -12,11 +12,11 @@ struct Project {
     let gitRepository: String
 }
 
-struct Course { 
+struct Course {
     let year: String
     let gitRepository: String
     let projects: [Project]
-}     
+}
 
 struct Model {
     let projects: Array<Project>
@@ -119,7 +119,7 @@ struct Model {
                 videoUrl: "",
                 gitRepository: "https://github.com/SwiftFMI/2019_prj_GameLoggerApp")
     ]
-    let futureProjects = Array<Project>()    
+    let futureProjects = Array<Project>()
     
     init() {
         pastProjects = pastProjectsYearOne + pastProjectsYearTwo
