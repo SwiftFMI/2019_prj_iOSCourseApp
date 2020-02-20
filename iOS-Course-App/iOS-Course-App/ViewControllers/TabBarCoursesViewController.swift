@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TabBarViewController : UITabBarController {
+class TabBarCoursesViewController : UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

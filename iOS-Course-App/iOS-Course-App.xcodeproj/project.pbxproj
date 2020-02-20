@@ -18,12 +18,8 @@
 		6C08D07C23F95E5700E5F473 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C08D07B23F95E5700E5F473 /* LoginViewController.swift */; };
 		6C08D07F23F96DC400E5F473 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C08D07E23F96DC300E5F473 /* Utilities.swift */; };
 		6C08D08123F9753700E5F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C08D08023F9753700E5F473 /* GoogleService-Info.plist */; };
-		6CD2EE3323FAB55A00F15CE6 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD2EE3223FAB55900F15CE6 /* CoursesViewController.swift */; };
 		E56EB2B223FD892200ADDA6D /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB2B123FD892200ADDA6D /* ProjectViewController.swift */; };
 		E56EB2B623FD8FC900ADDA6D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB2B523FD8FC900ADDA6D /* Model.swift */; };
-		E5C83F8823FE8650008D068A /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C83F8723FE864F008D068A /* CourseCell.swift */; };
-		E5C83F8A23FE865E008D068A /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C83F8923FE865E008D068A /* CourseTableViewCell.swift */; };
-		E5C83F8C23FE869F008D068A /* CurrentCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C83F8B23FE869F008D068A /* CurrentCoursesTableViewController.swift */; };
 		E5C83F8E23FE86AF008D068A /* TabBarCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C83F8D23FE86AF008D068A /* TabBarCoursesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,13 +38,9 @@
 		6C08D07B23F95E5700E5F473 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6C08D07E23F96DC300E5F473 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6C08D08023F9753700E5F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6CD2EE3223FAB55900F15CE6 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		B2D64C864F45310F71EE36C9 /* Pods_iOS_Course_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Course_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56EB2B123FD892200ADDA6D /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		E56EB2B523FD8FC900ADDA6D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		E5C83F8723FE864F008D068A /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
-		E5C83F8923FE865E008D068A /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
-		E5C83F8B23FE869F008D068A /* CurrentCoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentCoursesTableViewController.swift; sourceTree = "<group>"; };
 		E5C83F8D23FE86AF008D068A /* TabBarCoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoursesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,8 +88,6 @@
 			children = (
 				6C08D07D23F9619300E5F473 /* ViewControllers */,
 				6C08D06523F95C3E00E5F473 /* AppDelegate.swift */,
-				E5C83F8923FE865E008D068A /* CourseTableViewCell.swift */,
-				E5C83F8723FE864F008D068A /* CourseCell.swift */,
 				6C08D06723F95C3E00E5F473 /* SceneDelegate.swift */,
 				6C08D06B23F95C3E00E5F473 /* Main.storyboard */,
 				6C08D07E23F96DC300E5F473 /* Utilities.swift */,
@@ -115,10 +105,8 @@
 			children = (
 				6C08D07923F95E1500E5F473 /* SignUpViewController.swift */,
 				6C08D07B23F95E5700E5F473 /* LoginViewController.swift */,
-				E5C83F8B23FE869F008D068A /* CurrentCoursesTableViewController.swift */,
 				6C08D06923F95C3E00E5F473 /* ViewController.swift */,
 				E5C83F8D23FE86AF008D068A /* TabBarCoursesViewController.swift */,
-				6CD2EE3223FAB55900F15CE6 /* CoursesViewController.swift */,
 				E56EB2B123FD892200ADDA6D /* ProjectViewController.swift */,
 			);
 			path = ViewControllers;
@@ -249,18 +237,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C08D07F23F96DC400E5F473 /* Utilities.swift in Sources */,
-				6CD2EE3323FAB55A00F15CE6 /* CoursesViewController.swift in Sources */,
 				6C08D06A23F95C3E00E5F473 /* ViewController.swift in Sources */,
 				6C08D06623F95C3E00E5F473 /* AppDelegate.swift in Sources */,
-				E5C83F8823FE8650008D068A /* CourseCell.swift in Sources */,
 				E56EB2B623FD8FC900ADDA6D /* Model.swift in Sources */,
 				E56EB2B223FD892200ADDA6D /* ProjectViewController.swift in Sources */,
 				6C08D07A23F95E1500E5F473 /* SignUpViewController.swift in Sources */,
 				6C08D07C23F95E5700E5F473 /* LoginViewController.swift in Sources */,
 				6C08D06823F95C3E00E5F473 /* SceneDelegate.swift in Sources */,
-				E5C83F8A23FE865E008D068A /* CourseTableViewCell.swift in Sources */,
 				E5C83F8E23FE86AF008D068A /* TabBarCoursesViewController.swift in Sources */,
-				E5C83F8C23FE869F008D068A /* CurrentCoursesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

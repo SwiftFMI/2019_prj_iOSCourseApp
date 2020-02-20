@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToCoursesVC() {
-        guard let coursesVC = self.storyboard?.instantiateViewController(identifier: "CoursesVC") as? CoursesViewController else {return}
+        guard let coursesVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {return}
         self.navigationController?.pushViewController(coursesVC, animated: true)
     }
     
