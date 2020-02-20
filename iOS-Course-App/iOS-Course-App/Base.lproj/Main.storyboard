@@ -211,9 +211,20 @@
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AoA-Id-aAq" userLabel="videoView">
                                                 <rect key="frame" x="10" y="159" width="394" height="200"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdM-Na-nty">
+                                                        <rect key="frame" x="173" y="76" width="48" height="48"/>
+                                                        <state key="normal" image="playVideo"/>
+                                                        <connections>
+                                                            <action selector="playButtonTapped:" destination="rcN-ys-bSW" eventType="touchUpInside" id="j7o-Jf-d49"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" red="0.090046249329999994" green="0.11998710780000001" blue="0.28235247730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="98K-Pb-EyJ"/>
+                                                    <constraint firstItem="GdM-Na-nty" firstAttribute="centerY" secondItem="AoA-Id-aAq" secondAttribute="centerY" id="FX7-cc-ZjC"/>
+                                                    <constraint firstItem="GdM-Na-nty" firstAttribute="centerX" secondItem="AoA-Id-aAq" secondAttribute="centerX" id="yVR-GF-dGe"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoe-uR-Caj">
@@ -313,6 +324,7 @@
                         <outlet property="gitRepositoryButton" destination="mrj-BY-7gj" id="VNV-fC-fjh"/>
                         <outlet property="projectDescriptionLabel" destination="Ij2-Oe-T5J" id="DV2-WP-Uin"/>
                         <outlet property="projectNameLabel" destination="rvQ-Yu-QJe" id="dxG-Ul-jLr"/>
+                        <outlet property="videoView" destination="AoA-Id-aAq" id="sc3-61-IHf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56q-p8-7h7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -661,6 +673,7 @@
         <image name="backward" width="24" height="24"/>
         <image name="forward" width="24" height="24"/>
         <image name="play" width="24" height="24"/>
+        <image name="playVideo" width="48" height="48"/>
         <image name="suLogo" width="237" height="293"/>
     </resources>
     <inferredMetricsTieBreakers>

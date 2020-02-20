@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ProjectViewController: UIViewController {
     
-
+    @IBOutlet weak var videoView: UIView!
+    
     @IBOutlet weak var projectNameLabel: UILabel!
     @IBOutlet weak var projectDescriptionLabel: UILabel!
     @IBOutlet weak var gitRepositoryButton: UIButton!
@@ -21,7 +23,7 @@ class ProjectViewController: UIViewController {
         super.viewDidLoad()
         setupElements()
         self.title = "Project"
-
+        
     }
     
     func setupElements() {
@@ -44,5 +46,17 @@ class ProjectViewController: UIViewController {
         
         UIApplication.shared.canOpenURL(url)
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func playButtonTapped(_ sender: Any) {
+        print(projectInfo?.videoUrl ?? "nul")
+        let videoUrl = URL(string: projectInfo?.videoUrl ?? "")!
+        let videoAsset = AVAsset(url: videoUrl)
+        let playerItem = AVPlayerItem(asset: videoAsset)
+        let player = AVPlayer(playerItem: playerItem)
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = self.videoView.bounds
+        self.videoView.layer.addSublayer(playerLayer)
+        player.play()
     }
 }
