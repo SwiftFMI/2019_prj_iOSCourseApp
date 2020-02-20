@@ -113,7 +113,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jjA-ki-gaf">
-                                <rect key="frame" x="-30" y="822" width="474" height="40"/>
+                                <rect key="frame" x="88.5" y="822" width="237.00000000000006" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Jbx-DX-ODf"/>
                                 </constraints>
@@ -237,7 +237,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4WA-rE-unp">
-                                <rect key="frame" x="-30" y="768" width="474" height="40"/>
+                                <rect key="frame" x="88.5" y="768" width="237.00000000000006" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ld9-GU-mBq"/>
                                 </constraints>
@@ -386,7 +386,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suLogo" translatesAutoresizingMaskIntoConstraints="NO" id="g7Q-jx-Yct">
-                                <rect key="frame" x="-30" y="822" width="474" height="40"/>
+                                <rect key="frame" x="88.5" y="822" width="237.00000000000006" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="CJO-Wl-HvT"/>
                                 </constraints>
@@ -467,7 +467,7 @@
                             <outlet property="delegate" destination="EKc-tW-qKB" id="IFI-vj-X1N"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Past" id="kDF-cg-rS9"/>
+                    <tabBarItem key="tabBarItem" title="Past" image="backward" id="kDF-cg-rS9"/>
                     <navigationItem key="navigationItem" id="mgn-LZ-E18"/>
                     <connections>
                         <segue destination="rcN-ys-bSW" kind="show" id="omh-4r-BKz"/>
@@ -509,7 +509,7 @@
                             <outlet property="delegate" destination="Ylg-05-Di0" id="pFU-Xc-4D7"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Current" id="n6j-ng-cQR"/>
+                    <tabBarItem key="tabBarItem" title="Current" image="play" id="n6j-ng-cQR"/>
                     <connections>
                         <segue destination="rcN-ys-bSW" kind="show" id="008-GQ-PsW"/>
                     </connections>
@@ -541,7 +541,7 @@
                             <outlet property="delegate" destination="IYn-HO-CEb" id="gJU-Iz-Vps"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Future" id="icJ-fF-rIv"/>
+                    <tabBarItem key="tabBarItem" title="Future" image="forward" id="icJ-fF-rIv"/>
                     <connections>
                         <segue destination="rcN-ys-bSW" kind="show" id="isb-fV-m48"/>
                     </connections>
@@ -573,6 +573,9 @@
         <image name="SwiftLogo" width="401" height="125"/>
         <image name="appleLogo" width="199" height="117"/>
         <image name="background" width="1148" height="2048"/>
+        <image name="backward" width="24" height="24"/>
+        <image name="forward" width="24" height="24"/>
+        <image name="play" width="24" height="24"/>
         <image name="suLogo" width="237" height="293"/>
     </resources>
     <inferredMetricsTieBreakers>

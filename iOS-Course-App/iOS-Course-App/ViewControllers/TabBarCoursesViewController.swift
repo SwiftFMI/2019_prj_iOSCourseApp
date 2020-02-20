@@ -13,5 +13,10 @@ class TabBarCoursesViewController : UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.selectedIndex = 1
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //self.tabBarController?.selectedIndex = 1
     }
 }
