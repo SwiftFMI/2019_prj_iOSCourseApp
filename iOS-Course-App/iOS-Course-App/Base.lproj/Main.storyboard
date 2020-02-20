@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="glQ-Ur-GO7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="glQ-Ur-GO7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -478,6 +478,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Past" image="backward" id="kDF-cg-rS9"/>
                     <navigationItem key="navigationItem" id="mgn-LZ-E18"/>
+                    <connections>
+                        <segue destination="xUI-1s-rrb" kind="show" identifier="projectsSegue" id="8EO-xB-sjf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7c3-VM-y3h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,10 +519,51 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Current" image="play" id="n6j-ng-cQR"/>
+                    <connections>
+                        <segue destination="xUI-1s-rrb" kind="show" identifier="projectsSegue" id="ihb-0W-jwg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSy-zk-h0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2412" y="421"/>
+        </scene>
+        <!--Course Projects Table View Controller-->
+        <scene sceneID="FsF-8Y-E2J">
+            <objects>
+                <tableViewController id="xUI-1s-rrb" customClass="CourseProjectsTableViewController" customModule="iOS_Course_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Frx-xe-xju">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="project" textLabel="Jj3-jz-owy" style="IBUITableViewCellStyleDefault" id="XVd-Rj-s0R">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XVd-Rj-s0R" id="ktu-s0-Mwm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jj3-jz-owy">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xUI-1s-rrb" id="zyU-l0-qIS"/>
+                            <outlet property="delegate" destination="xUI-1s-rrb" id="3gJ-lV-lse"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="927-wS-xqQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DOD-Ci-qFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3293" y="425"/>
         </scene>
         <!--Future-->
         <scene sceneID="QAx-Ik-tZx">
@@ -554,6 +598,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Future" image="forward" id="icJ-fF-rIv"/>
+                    <connections>
+                        <segue destination="xUI-1s-rrb" kind="show" identifier="projectsSegue" id="VuB-n8-yfX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAk-bo-inh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -587,4 +634,7 @@
         <image name="play" width="24" height="24"/>
         <image name="suLogo" width="237" height="293"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VuB-n8-yfX"/>
+    </inferredMetricsTieBreakers>
 </document>

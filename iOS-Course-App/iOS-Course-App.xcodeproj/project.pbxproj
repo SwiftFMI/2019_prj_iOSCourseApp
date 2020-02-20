@@ -18,6 +18,7 @@
 		6C08D07C23F95E5700E5F473 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C08D07B23F95E5700E5F473 /* LoginViewController.swift */; };
 		6C08D07F23F96DC400E5F473 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C08D07E23F96DC300E5F473 /* Utilities.swift */; };
 		6C08D08123F9753700E5F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C08D08023F9753700E5F473 /* GoogleService-Info.plist */; };
+		6C0BA67C23FEBB7E008558CD /* CourseProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0BA67B23FEBB7D008558CD /* CourseProjectsTableViewController.swift */; };
 		E54238CF23FEAE0B00725551 /* PresentCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54238CE23FEAE0B00725551 /* PresentCoursesTableViewController.swift */; };
 		E54238D123FEB76300725551 /* PastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54238D023FEB76300725551 /* PastTableViewController.swift */; };
 		E54238D323FEB7E500725551 /* FutureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54238D223FEB7E500725551 /* FutureTableViewController.swift */; };
@@ -41,6 +42,7 @@
 		6C08D07B23F95E5700E5F473 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6C08D07E23F96DC300E5F473 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6C08D08023F9753700E5F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6C0BA67B23FEBB7D008558CD /* CourseProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProjectsTableViewController.swift; sourceTree = "<group>"; };
 		B2D64C864F45310F71EE36C9 /* Pods_iOS_Course_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Course_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54238CE23FEAE0B00725551 /* PresentCoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentCoursesTableViewController.swift; sourceTree = "<group>"; };
 		E54238D023FEB76300725551 /* PastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTableViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				E54238CE23FEAE0B00725551 /* PresentCoursesTableViewController.swift */,
 				E54238D023FEB76300725551 /* PastTableViewController.swift */,
 				E54238D223FEB7E500725551 /* FutureTableViewController.swift */,
+				6C0BA67B23FEBB7D008558CD /* CourseProjectsTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				6C08D06A23F95C3E00E5F473 /* ViewController.swift in Sources */,
 				E54238CF23FEAE0B00725551 /* PresentCoursesTableViewController.swift in Sources */,
 				6C08D06623F95C3E00E5F473 /* AppDelegate.swift in Sources */,
+				6C0BA67C23FEBB7E008558CD /* CourseProjectsTableViewController.swift in Sources */,
 				E56EB2B623FD8FC900ADDA6D /* Model.swift in Sources */,
 				E56EB2B223FD892200ADDA6D /* ProjectViewController.swift in Sources */,
 				E54238D123FEB76300725551 /* PastTableViewController.swift in Sources */,
