@@ -27,7 +27,6 @@ class ProjectViewController: UIViewController {
     }
     
     func setupElements() {
-        Utilities.styleFilledButton(gitRepositoryButton)
         setupData()
     }
     
@@ -49,11 +48,8 @@ class ProjectViewController: UIViewController {
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {
-        print(projectInfo?.videoUrl ?? "nul")
-        let videoUrl = URL(string: projectInfo?.videoUrl ?? "")!
-        let videoAsset = AVAsset(url: videoUrl)
-        let playerItem = AVPlayerItem(asset: videoAsset)
-        let player = AVPlayer(playerItem: playerItem)
+        let videoUrl = URL(string: projectInfo?.videoUrl ?? "https://www.youtube.com/watch?v=nyp_PczrqFE")!
+        let player = AVPlayer(url: videoUrl)
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = self.videoView.bounds
         self.videoView.layer.addSublayer(playerLayer)
