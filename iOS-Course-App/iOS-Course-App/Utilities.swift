@@ -45,4 +45,17 @@ class Utilities {
         button.tintColor = UIColor.black
     }
     
+    static func styleTableViewCell(_ cell: UITableViewCell) {
+        cell.layer.borderWidth = 10
+        cell.layer.borderColor = UIColor.clear.cgColor
+        cell.layer.backgroundColor = UIColor.clear.cgColor
+        cell.indentationLevel = 3
+    }
+    
+    static func styleTableView(_ tableView: UITableView) {
+        let backgroundImage = UIImage(named: "background")
+        tableView.backgroundView = UIImageView(image: backgroundImage)
+        tableView.separatorStyle = .none
+    }
+    
 }

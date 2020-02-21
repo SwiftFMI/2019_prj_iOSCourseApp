@@ -12,7 +12,8 @@ class PresentCoursesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        Utilities.styleTableView(self.tableView)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,7 +41,9 @@ class PresentCoursesTableViewController: UITableViewController {
         let course = Model().presentCourses[indexPath.row]
         cell.textLabel?.text = course.year
         cell.imageView?.image = UIImage(named: "swift")
-
+        
+        Utilities.styleTableViewCell(cell)
+        
         return cell
     }
     

@@ -15,6 +15,8 @@ class CourseProjectsTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Courses"
 
+        Utilities.styleTableView(self.tableView)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -40,6 +42,9 @@ class CourseProjectsTableViewController: UITableViewController {
         let project = projects?[indexPath.row]
         cell.textLabel?.text = project?.name
         cell.imageView?.image = UIImage(named: project?.image ?? "dev")
+        
+        Utilities.styleTableViewCell(cell)
+        
         return cell
     }
     
