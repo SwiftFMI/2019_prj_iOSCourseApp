@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 import AVFoundation
 
 class ProjectViewController: UIViewController {
@@ -18,7 +19,7 @@ class ProjectViewController: UIViewController {
     @IBOutlet weak var gitRepositoryButton: UIButton!
    
     var projectInfo: Project?
-    
+    var player = AVPlayer()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupElements()
@@ -48,11 +49,14 @@ class ProjectViewController: UIViewController {
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {
-        let videoUrl = URL(string: projectInfo?.videoUrl ?? "https://www.youtube.com/watch?v=nyp_PczrqFE")!
-        let player = AVPlayer(url: videoUrl)
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.videoView.bounds
-        self.videoView.layer.addSublayer(playerLayer)
+        let videoUrl = NSURL(string: projectInfo?.videoUrl ?? "https://devstreaming-cdn.apple.com/videos/app_store/app-store-product-page/hls_vod_mvp.m3u8")!
+        player = AVPlayer(url: videoUrl as URL)
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        self.showDetailViewController(playerController, sender: nil)
+      playerController.view.frame = self.view.frame
+        self.view.addSubview(playerController.view)
         player.play()
     }
+
 }
