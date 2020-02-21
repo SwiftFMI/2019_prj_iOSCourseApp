@@ -37,9 +37,9 @@ class CourseProjectsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "project", for: indexPath)
-        var project = projects?[indexPath.row]
-        cell.textLabel?.text = project.name
-        cell.imageView?.image = UIImage(named: project.image)
+        let project = projects?[indexPath.row]
+        cell.textLabel?.text = project?.name
+        cell.imageView?.image = UIImage(named: project?.image ?? "dev")
         return cell
     }
     

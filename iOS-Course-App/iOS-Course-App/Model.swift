@@ -9,7 +9,7 @@ struct Project {
     let courseYear: String
     let description: String
     let videoUrl: String
-    let imageName: String
+    let image: String
     let gitRepository: String
 }
 
@@ -49,7 +49,7 @@ struct Model {
                 courseYear: CourseYears().past[0],
                 description: "Приложение, което показва местата, на които си бил.",
                 videoUrl: "",
-                image: "2017-100-places",
+                image: "dev",
                 gitRepository: "https://github.com/SwiftFMI/2017_prj_100_place10s"),
         Project(name: "Mama Weather App",
                 courseYear: CourseYears().past[0],
@@ -62,8 +62,8 @@ struct Model {
         Project(name: "E-Shop App",
                 courseYear: CourseYears().past[1],
                 description: "Мобилно приложение/шаблон (template) за специализиран електронен магазин." ,
+                videoUrl: "https://drive.google.com/file/d/1-JrsvTqqZAxGMrxKkDIID2cBY7y2w5JE/view?usp=sharing",
                 image: "2018-eshop",
-                videoUrl: "",
                 gitRepository: "https://github.com/SwiftFMI/2018_prj_eshop/"),
         Project(name: "Active Citizen App",
                 courseYear: CourseYears().past[1],
@@ -80,20 +80,20 @@ struct Model {
         Project(name: "FMI App",
                 courseYear: CourseYears().past[1],
                 description: "Приложение, което ще предоставя достъп до курсовете и техните лекции, водени във ФМИ. Студентите ще имат достъп до лекциите и другите материали, свързани с курсовете.",
-                videoUrl: "",
+                videoUrl: "https://drive.google.com/file/d/1yPN2mG1SMWj0P2fPtz7xLDN3ZXlxXGlh/view?usp=sharing",
                 image: "2018-fmi-courses",
                 gitRepository: "https://github.com/SwiftFMI/2018_prj_fmi"),
         Project(name: "Nightclub App",
                 courseYear: CourseYears().past[1],
                 description: "Мобилно приложение/шаблон (template) за промотиране на нощен клуб.",
-                videoUrl: "",
+                videoUrl: "https://drive.google.com/file/d/1H5C7GLYCux-hze5uMOEj3OiKBdil0Zhj/view?usp=sharing",
                 image: "2018-nightclubs",
                 gitRepository: "https://github.com/SwiftFMI/2018_prj_nightclub"),
-        Project(name: "Shushu-muschu App",
+        Project(name: "Shushu-mushu App",
                 courseYear: CourseYears().past[1],
                 description: "Чат услуга за мобилни телефони. Потребителите могат да контактуват един с друг, ако се намират близо един до друг, дори и да нямат връзка с интернет.",
-                videoUrl: "",
-                image: "2018-shushumushu",
+                videoUrl: "https://drive.google.com/file/d/1ngTZIKye3zcq3N429F_CE4RU-lIeCFUu/view?usp=sharing",
+                image: "2018-shushu-mushu",
                 gitRepository: "https://github.com/SwiftFMI/2018_prj_shushumushu"),
     ]
     let presentProjects = [
