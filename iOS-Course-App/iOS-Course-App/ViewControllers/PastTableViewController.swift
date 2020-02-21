@@ -12,6 +12,9 @@ class PastTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Utilities.styleTableView(self.tableView)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,6 +41,8 @@ class PastTableViewController: UITableViewController {
         let course = Model().pastCourses[indexPath.row]
         cell.textLabel?.text = course.year
         cell.imageView?.image = UIImage(named: "swift")
+        
+        Utilities.styleTableViewCell(cell)
         
         return cell
     }

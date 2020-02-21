@@ -23,13 +23,9 @@ class ProjectViewController: UIViewController {
     var player = AVPlayer()
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupElements()
+        setupData()
         self.title = "Project"
         
-    }
-    
-    func setupElements() {
-        setupData()
     }
     
     func setupData() {
@@ -41,6 +37,7 @@ class ProjectViewController: UIViewController {
         projectNameLabel.text = project.name + " " + year
         projectDescriptionLabel.text = project.description
     }
+    
     @IBAction func gitRepositoryButtonTapped(
         _ sender: Any) {
         let url = URL(string: projectInfo?.gitRepository ?? "github.com/SwiftFMI")!
