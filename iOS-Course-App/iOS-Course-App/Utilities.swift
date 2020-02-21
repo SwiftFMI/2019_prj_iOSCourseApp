@@ -49,7 +49,6 @@ class Utilities {
         cell.layer.borderWidth = 10
         cell.layer.borderColor = UIColor.clear.cgColor
         cell.layer.backgroundColor = UIColor.clear.cgColor
-        cell.indentationLevel = 3
     }
     
     static func styleTableView(_ tableView: UITableView) {
