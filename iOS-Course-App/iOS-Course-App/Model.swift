@@ -9,7 +9,7 @@ struct Project {
     let courseYear: String
     let description: String
     let videoUrl: String
-    let imageName: String
+    let image: String
     let gitRepository: String
 }
 
@@ -49,7 +49,7 @@ struct Model {
                 courseYear: CourseYears().past[0],
                 description: "Приложение, което показва местата, на които си бил.",
                 videoUrl: "https://www.youtube.com/watch?v=nyp_PczrqFE",
-                image: "2017-100-places",
+                image: "dev",
                 gitRepository: "https://github.com/SwiftFMI/2017_prj_100_place10s"),
         Project(name: "Mama Weather App",
                 courseYear: CourseYears().past[0],
@@ -93,7 +93,7 @@ struct Model {
                 courseYear: CourseYears().past[1],
                 description: "Чат услуга за мобилни телефони. Потребителите могат да контактуват един с друг, ако се намират близо един до друг, дори и да нямат връзка с интернет.",
                 videoUrl: "https://drive.google.com/file/d/1ngTZIKye3zcq3N429F_CE4RU-lIeCFUu/view?usp=sharing",
-                image: "2018-shushumushu",
+                image: "2018-shushu-mushu",
                 gitRepository: "https://github.com/SwiftFMI/2018_prj_shushumushu"),
     ]
     let presentProjects = [
