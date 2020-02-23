@@ -46,15 +46,24 @@ class Utilities {
     }
     
     static func styleTableViewCell(_ cell: UITableViewCell) {
-        cell.layer.borderWidth = 10
-        cell.layer.borderColor = UIColor.clear.cgColor
+        cell.layer.borderWidth = 15
+        cell.layer.borderColor = UIColor.init(red: 115/255, green: 150/255, blue: 246/255, alpha: 0).cgColor
         cell.layer.backgroundColor = UIColor.clear.cgColor
+        cell.indentationLevel = 1
+        cell.textLabel?.textAlignment = .left
     }
     
     static func styleTableView(_ tableView: UITableView) {
         let backgroundImage = UIImage(named: "background")
         tableView.backgroundView = UIImageView(image: backgroundImage)
+        
+        tableView.contentInset = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 0.0, right: 0.0)
+        
         tableView.separatorStyle = .none
+    }
+    
+    static func resizeTableView(_ tableView: UITableView) {
+        tableView.rowHeight = 200.0
     }
     
 }

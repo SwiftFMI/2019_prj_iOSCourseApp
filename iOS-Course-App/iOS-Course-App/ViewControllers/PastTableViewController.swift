@@ -37,12 +37,12 @@ class PastTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "pastCell", for: indexPath)
-
+       
+        Utilities.styleTableViewCell(cell)
+        
         let course = Model().pastCourses[indexPath.row]
         cell.textLabel?.text = course.year
         cell.imageView?.image = UIImage(named: "swift")
-        
-        Utilities.styleTableViewCell(cell)
         
         return cell
     }

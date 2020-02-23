@@ -16,7 +16,7 @@ class CourseProjectsTableViewController: UITableViewController {
         self.title = "Courses"
 
         Utilities.styleTableView(self.tableView)
-        
+        Utilities.resizeTableView(self.tableView)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -39,11 +39,12 @@ class CourseProjectsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "project", for: indexPath)
+        
+        Utilities.styleTableViewCell(cell)
+        
         let project = projects?[indexPath.row]
         cell.textLabel?.text = project?.name
         cell.imageView?.image = UIImage(named: project?.image ?? "dev")
-        
-        Utilities.styleTableViewCell(cell)
         
         return cell
     }
