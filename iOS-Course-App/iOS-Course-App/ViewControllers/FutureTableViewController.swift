@@ -10,11 +10,13 @@ import UIKit
 
 class FutureTableViewController: UITableViewController {
 
+    var user: User?
+    var loggedIn: Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-         Utilities.styleTableView(self.tableView)
-        
+        setupData()
+        setupElements()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -22,6 +24,20 @@ class FutureTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    func setupData() {
+        self.loggedIn = user?.loggedIn
+    }
+
+    func setupElements() {
+        Utilities.styleTableView(self.tableView)
+    }
+
+    @objc func loginButtonTabbed(sender: UIButton!) {
+        guard let loginVC = self.storyboard?.instantiateViewController(identifier: "loginVC") as? LoginViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(loginVC, animated: true)
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,12 +61,47 @@ class FutureTableViewController: UITableViewController {
         
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          self.performSegue(withIdentifier: "projectsSegue", sender:nil)
     }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let login = loggedIn {
+            if !login {
+                let frame = tableView.frame
+                let loginImage = UIImage(named: "login")
+                let loginButton = UIButton(frame: CGRect(x: 325,y: 0,width: 25,height: 50))
+                loginButton.tag = section
+                let color = UIColor.init(red: 115/255, green: 150/255, blue: 246/255, alpha: 0)
+                loginButton.setTitle("Login", for: .normal)
+                loginButton.setTitleColor(color, for: .normal)
+                loginButton.setImage(loginImage, for: .normal)
+                loginButton.addTarget(self, action: #selector(loginButtonTabbed), for: .touchUpInside)
+                
+                let loginHeader = UIView(frame: CGRect(x: 0,y: 0, width: frame.width, height: frame.height))
+                loginHeader.addSubview(loginButton)
+                
+                return loginHeader
+            }
+        }
+        
+        return UIView()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if let login = loggedIn {
+            if !login {
+                 return CGFloat(50)
+            }
+        }
+        return CGFloat(0)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let projects = Model().futureProjects
         (segue.destination as? CourseProjectsTableViewController)?.projects = projects

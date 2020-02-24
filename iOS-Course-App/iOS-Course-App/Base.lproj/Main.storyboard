@@ -10,16 +10,16 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="iOS_Course_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="BYZ-38-t0r" customClass="LoginViewController" customModule="iOS_Course_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dAi-hb-SPz">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRz-xe-DOP">
-                                <rect key="frame" x="136" y="93" width="142.5" height="54"/>
+                                <rect key="frame" x="136" y="49" width="142.5" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="8SD-r2-LHY"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rg3-wL-hBW" userLabel="login Stack View">
-                                <rect key="frame" x="40" y="158" width="334" height="170"/>
+                                <rect key="frame" x="40" y="114" width="334" height="170"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1k-Du-vv1">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -158,18 +158,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582.60869565217399" y="98.4375"/>
+            <point key="canvasLocation" x="203" y="-627"/>
         </scene>
         <!--Project View Controller-->
         <scene sceneID="Oj4-UV-bEE">
             <objects>
                 <viewController storyboardIdentifier="ProjectVC" id="rcN-ys-bSW" customClass="ProjectViewController" customModule="iOS_Course_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MiV-dX-i7G">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPG-YJ-VCn">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8o-Mc-3jF">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="4096"/>
@@ -265,14 +265,14 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwiftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="D4T-06-x5L">
-                                                <rect key="frame" x="264" y="734" width="100" height="40"/>
+                                                <rect key="frame" x="264" y="768" width="100" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="HzC-yH-t5S"/>
                                                     <constraint firstAttribute="width" constant="100" id="dh4-PV-CdG"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NSb-vX-Hmr">
-                                                <rect key="frame" x="50" y="734" width="100" height="40"/>
+                                                <rect key="frame" x="50" y="768" width="100" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="Oq2-mu-hHi"/>
                                                     <constraint firstAttribute="height" constant="40" id="mz7-Lb-Sam"/>
@@ -353,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56q-p8-7h7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3882.608695652174" y="-310.04464285714283"/>
+            <point key="canvasLocation" x="4907" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UXF-xa-o0Y">
@@ -364,12 +364,82 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Fux-lL-KV8" kind="relationship" relationship="rootViewController" id="CQN-en-gZq"/>
+                        <segue destination="U7X-PX-j4I" kind="relationship" relationship="rootViewController" id="KSo-4I-g06"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWk-Xm-Ytc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="781"/>
+            <point key="canvasLocation" x="-778" y="117"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="U2Y-8E-OJ2">
+            <objects>
+                <viewController id="U7X-PX-j4I" customClass="WelcomeViewController" customModule="iOS_Course_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bw3-aX-F5F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="HIs-kB-lHj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="1d8-vH-eIT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="478"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyo-gO-pdR">
+                                <rect key="frame" x="195" y="496" width="24" height="50"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS courses app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XV-Os-CzL">
+                                <rect key="frame" x="114" y="563" width="186.5" height="29.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.0039208196103572845" green="0.0039220647886395454" blue="0.0039204265922307968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwy-cy-i9o" userLabel="startButton">
+                                <rect key="frame" x="107" y="457" width="200" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="LET'S GET STARTED!">
+                                    <color key="titleColor" red="0.45098039220000002" green="0.58823529409999997" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startedButtonTabbed:" destination="U7X-PX-j4I" eventType="touchUpInside" id="700-xp-n31"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-se-Daa">
+                                <rect key="frame" x="8" y="541" width="398" height="234"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HIs-kB-lHj" firstAttribute="top" secondItem="gec-yD-SpM" secondAttribute="top" id="1QC-Wi-ayy"/>
+                            <constraint firstItem="gec-yD-SpM" firstAttribute="leading" secondItem="1d8-vH-eIT" secondAttribute="leading" id="6Xr-Xt-k5I"/>
+                            <constraint firstItem="HIs-kB-lHj" firstAttribute="leading" secondItem="gec-yD-SpM" secondAttribute="leading" id="88a-aX-Br9"/>
+                            <constraint firstItem="Hyo-gO-pdR" firstAttribute="top" secondItem="1d8-vH-eIT" secondAttribute="bottom" constant="-70" id="BLf-jd-Rrs"/>
+                            <constraint firstItem="gec-yD-SpM" firstAttribute="bottom" secondItem="HIs-kB-lHj" secondAttribute="bottom" id="Fpa-y2-wps"/>
+                            <constraint firstItem="gec-yD-SpM" firstAttribute="bottom" secondItem="MqB-se-Daa" secondAttribute="bottom" constant="87" id="IxJ-I6-I0N"/>
+                            <constraint firstItem="8XV-Os-CzL" firstAttribute="centerX" secondItem="gec-yD-SpM" secondAttribute="centerX" id="O3e-j1-5KI"/>
+                            <constraint firstItem="1d8-vH-eIT" firstAttribute="trailing" secondItem="gec-yD-SpM" secondAttribute="trailing" id="Ooa-sY-ZPO"/>
+                            <constraint firstItem="iwy-cy-i9o" firstAttribute="centerX" secondItem="gec-yD-SpM" secondAttribute="centerX" id="Rv1-WJ-tYA"/>
+                            <constraint firstItem="1d8-vH-eIT" firstAttribute="top" secondItem="gec-yD-SpM" secondAttribute="top" id="XKS-Rb-cDQ"/>
+                            <constraint firstItem="Hyo-gO-pdR" firstAttribute="centerX" secondItem="gec-yD-SpM" secondAttribute="centerX" id="fL7-fD-JVT"/>
+                            <constraint firstItem="1d8-vH-eIT" firstAttribute="centerX" secondItem="gec-yD-SpM" secondAttribute="centerX" id="h5o-VI-kUR"/>
+                            <constraint firstItem="MqB-se-Daa" firstAttribute="centerX" secondItem="gec-yD-SpM" secondAttribute="centerX" id="hZr-ro-bIO"/>
+                            <constraint firstItem="8XV-Os-CzL" firstAttribute="top" secondItem="Hyo-gO-pdR" secondAttribute="bottom" constant="17" id="nFZ-SO-RJb"/>
+                            <constraint firstItem="iwy-cy-i9o" firstAttribute="centerY" secondItem="gec-yD-SpM" secondAttribute="centerY" id="o70-DZ-SIC"/>
+                            <constraint firstItem="gec-yD-SpM" firstAttribute="trailing" secondItem="HIs-kB-lHj" secondAttribute="trailing" id="oiE-6g-qR0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gec-yD-SpM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Afc-oh-1Bm"/>
+                    <connections>
+                        <outlet property="startButton" destination="iwy-cy-i9o" id="HGw-il-Gbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aNI-VI-FZ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="117"/>
         </scene>
         <!--Tab Bar Courses View Controller-->
         <scene sceneID="N9w-uM-01O">
@@ -389,21 +459,21 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6g-Hh-ZBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1475" y="421"/>
+            <point key="canvasLocation" x="1128" y="117"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="f8s-K5-E3J">
             <objects>
                 <viewController id="JwY-ge-FUL" customClass="SignUpViewController" customModule="iOS_Course_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zjl-HT-n22">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zu7-xA-S0J">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DwI-8c-6rD">
-                                <rect key="frame" x="70" y="138" width="274" height="674"/>
+                                <rect key="frame" x="70" y="50" width="274" height="708"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGk-A5-0hK">
                                         <rect key="frame" x="0.0" y="0.0" width="274" height="40"/>
@@ -438,13 +508,13 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYT-Gq-sKa">
-                                        <rect key="frame" x="0.0" y="240" width="274" height="364"/>
+                                        <rect key="frame" x="0.0" y="240" width="274" height="398"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="0.40131265859999998" green="0.02892805235" blue="0.036677707980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jz-EZ-xpM">
-                                        <rect key="frame" x="0.0" y="624" width="274" height="50"/>
+                                        <rect key="frame" x="0.0" y="658" width="274" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="4vQ-Rg-Rfq"/>
                                         </constraints>
@@ -459,26 +529,26 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="SIGN UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYi-Cx-PP8">
-                                <rect key="frame" x="114" y="88" width="186" height="54"/>
+                                <rect key="frame" x="114" y="0.0" width="186" height="54"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="45"/>
                                 <color key="textColor" red="0.45098039215686275" green="0.58823529411764708" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suLogo" translatesAutoresizingMaskIntoConstraints="NO" id="g7Q-jx-Yct">
-                                <rect key="frame" x="-30" y="822" width="474" height="40"/>
+                                <rect key="frame" x="-30" y="768" width="474" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="CJO-Wl-HvT"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="rmv-Qy-xMM">
-                                <rect key="frame" x="50" y="822" width="100" height="40"/>
+                                <rect key="frame" x="50" y="768" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="TrK-oi-tDD"/>
                                     <constraint firstAttribute="width" constant="100" id="c6B-aO-i6p"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwiftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FvG-HP-TM3">
-                                <rect key="frame" x="264" y="827" width="100" height="40"/>
+                                <rect key="frame" x="264" y="773" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="QO7-Rf-e4D"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="dO2-Rb-kJF"/>
@@ -521,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsn-WH-F5k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1577" y="-660"/>
+            <point key="canvasLocation" x="1332" y="-627"/>
         </scene>
         <!--Past Courses-->
         <scene sceneID="MK9-fV-ZWz">
@@ -563,7 +633,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7c3-VM-y3h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2413" y="-310"/>
+            <point key="canvasLocation" x="2412" y="-627"/>
         </scene>
         <!--Current-->
         <scene sceneID="41l-0v-oLk">
@@ -598,20 +668,21 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Current" image="play" id="n6j-ng-cQR"/>
+                    <navigationItem key="navigationItem" id="18Q-6b-XDn"/>
                     <connections>
                         <segue destination="xUI-1s-rrb" kind="show" identifier="projectsSegue" id="ihb-0W-jwg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSy-zk-h0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="421"/>
+            <point key="canvasLocation" x="2412" y="117"/>
         </scene>
         <!--Course Projects Table View Controller-->
         <scene sceneID="FsF-8Y-E2J">
             <objects>
                 <tableViewController id="xUI-1s-rrb" customClass="CourseProjectsTableViewController" customModule="iOS_Course_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Frx-xe-xju">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -650,7 +721,61 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOD-Ci-qFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3293" y="425"/>
+            <point key="canvasLocation" x="3738" y="117"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="7HG-VV-bfn">
+            <objects>
+                <viewController storyboardIdentifier="profileVC" id="zkK-so-6l7" customClass="ProfileViewController" customModule="iOS_Course_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yMJ-36-ZGc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Tkw-IG-hg1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="wMb-tx-8fA">
+                                <rect key="frame" x="143" y="154" width="128" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPH-zj-QFV">
+                                <rect key="frame" x="169" y="332" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-9I-vFJ" userLabel="Email Label">
+                                <rect key="frame" x="38" y="442.5" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Tkw-IG-hg1" firstAttribute="leading" secondItem="Ka1-dy-aj5" secondAttribute="leading" id="34h-Md-NIr"/>
+                            <constraint firstItem="5aa-9I-vFJ" firstAttribute="centerY" secondItem="Ka1-dy-aj5" secondAttribute="centerY" id="4cW-qZ-5pQ"/>
+                            <constraint firstItem="Ka1-dy-aj5" firstAttribute="trailing" secondItem="Tkw-IG-hg1" secondAttribute="trailing" id="67x-pw-gPL"/>
+                            <constraint firstItem="wMb-tx-8fA" firstAttribute="top" secondItem="Ka1-dy-aj5" secondAttribute="top" constant="110" id="6CF-g8-XLF"/>
+                            <constraint firstItem="Tkw-IG-hg1" firstAttribute="top" secondItem="Ka1-dy-aj5" secondAttribute="top" id="Dg0-fU-ybv"/>
+                            <constraint firstItem="mPH-zj-QFV" firstAttribute="top" secondItem="wMb-tx-8fA" secondAttribute="bottom" constant="50" id="Gyw-8l-zrj"/>
+                            <constraint firstItem="wMb-tx-8fA" firstAttribute="centerX" secondItem="Ka1-dy-aj5" secondAttribute="centerX" id="M9W-ea-aaG"/>
+                            <constraint firstItem="Ka1-dy-aj5" firstAttribute="bottom" secondItem="Tkw-IG-hg1" secondAttribute="bottom" id="bLx-7E-012"/>
+                            <constraint firstItem="Ka1-dy-aj5" firstAttribute="trailing" secondItem="5aa-9I-vFJ" secondAttribute="trailing" constant="335" id="ge7-IR-GG0"/>
+                            <constraint firstItem="mPH-zj-QFV" firstAttribute="centerX" secondItem="Ka1-dy-aj5" secondAttribute="centerX" id="m4j-Oc-ec9"/>
+                            <constraint firstItem="5aa-9I-vFJ" firstAttribute="leading" secondItem="Ka1-dy-aj5" secondAttribute="leading" constant="38" id="yMF-Lr-2hY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ka1-dy-aj5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="FAl-4W-549"/>
+                    <connections>
+                        <outlet property="emailLaek" destination="5aa-9I-vFJ" id="GYG-kq-Syf"/>
+                        <outlet property="profilePicture" destination="wMb-tx-8fA" id="fJe-bK-Sxn"/>
+                        <outlet property="usernameLabel" destination="mPH-zj-QFV" id="Jvj-nr-253"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UtY-Gt-Kbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1127.536231884058" y="920.75892857142856"/>
         </scene>
         <!--Future-->
         <scene sceneID="QAx-Ik-tZx">
@@ -691,25 +816,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAk-bo-inh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="1147"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="UMt-sC-tli">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="glQ-Ur-GO7" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mnn-kO-qMH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ny6-65-aZN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rhv-63-YFM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-190" y="99"/>
+            <point key="canvasLocation" x="2412" y="921"/>
         </scene>
     </scenes>
     <resources>
@@ -720,8 +827,11 @@
         <image name="forward" width="24" height="24"/>
         <image name="git" width="64" height="64"/>
         <image name="play" width="24" height="24"/>
+        <image name="profile" width="24" height="24"/>
         <image name="suLogo" width="237" height="293"/>
+        <image name="user" width="128" height="128"/>
         <image name="video-player" width="512" height="512"/>
+        <image name="welcome" width="698" height="239"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ihb-0W-jwg"/>

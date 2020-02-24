@@ -66,4 +66,8 @@ class Utilities {
         tableView.rowHeight = 200.0
     }
     
+    static func styleTabBar(_ tabBar: UITabBar) {
+        let backgroundImage = UIImage(named: "background")
+        tabBar.backgroundImage = backgroundImage
+    }
 }

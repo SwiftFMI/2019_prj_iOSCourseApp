@@ -20,14 +20,20 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpElements()
-        self.title = "Sign up"
-        self.hideKeyboardWhenTappedAround() 
-        // Do any additional setup after loading the view.
+        setupElements()
+        setupData()
+        self.hideKeyboardWhenTappedAround()
     }
-    func setUpElements() {
+    
+    func setupData() {
+        self.title = "Sign up"
+    }
+    
+    func setupElements() {
         
         errorLabel.alpha = 0
         
@@ -59,9 +65,11 @@ class SignUpViewController: UIViewController {
     }
     
     func transitionToLogin() {
-        let rootVC = self.navigationController?.viewControllers.first as! LoginViewController
+        let size = self.navigationController?.viewControllers.count
+        let rootVC = self.navigationController?.viewControllers[(size ?? 2)-2] as! LoginViewController
         rootVC.emailTextField.text = self.emailTextField.text
         rootVC.passwordTextField.text = self.passwordTextField.text
+        rootVC.user = self.user
         self.navigationController?.viewControllers[0] = rootVC
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -90,13 +98,14 @@ class SignUpViewController: UIViewController {
                     
                     // User was created succesfully
                     let db = Firestore.firestore()
-                    
                     db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "uid": result!.user.uid]) { (error) in
                         
                         if error != nil {
                             self.showError("Error saving user data")
                         }
                     }
+                    
+                    self.user = User(loggedIn: true, firstName: firstName, lastName: lastName, email: email)
                     // Transition to home screen
                     self.transitionToLogin()
                 }

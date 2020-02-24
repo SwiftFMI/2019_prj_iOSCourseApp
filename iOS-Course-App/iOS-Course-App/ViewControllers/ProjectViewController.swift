@@ -24,8 +24,6 @@ class ProjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupData()
-        self.title = "Project"
-        
     }
     
     func setupData() {
@@ -36,6 +34,15 @@ class ProjectViewController: UIViewController {
         let year = courseYear[1] + "/" + courseYear[2]
         projectNameLabel.text = project.name + " " + year
         projectDescriptionLabel.text = project.description
+        self.title = "Project"
+    }
+    
+    @objc func loginButtonTabbed(sender: UIButton!) {
+        guard let loginVC = self.storyboard?.instantiateViewController(identifier: "loginVC") as? LoginViewController else {
+            return
+        }
+        
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
     @IBAction func gitRepositoryButtonTapped(

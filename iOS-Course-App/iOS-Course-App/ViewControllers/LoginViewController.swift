@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class LoginViewController: UIViewController {
 
@@ -17,14 +18,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var goToSignUpButton: UIButton!
     
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpElements()
-        self.title = "Login"
+        setupElements()
+        setupData()
         self.hideKeyboardWhenTappedAround()
-        // Do any additional setup after loading the view.
     }
-    func setUpElements() {
+    
+    func setupData() {
+        self.title = "Login"
+    }
+    
+    func setupElements() {
         
         errorLabel.alpha = 0
         
@@ -52,9 +59,12 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func transitionToCoursesVC() {
-        guard let coursesVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {return}
-        self.navigationController?.pushViewController(coursesVC, animated: true)
+    func transitionToTabBarVC(_ user: User?) {
+        guard let tabBarVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {
+               return
+           }
+        tabBarVC.user = user ?? User(loggedIn: true, firstName: "", lastName: "", email: "")
+        self.navigationController?.pushViewController(tabBarVC, animated: true)
     }
     
     @IBAction func logInButtonTapped(_ sender: Any) {
@@ -75,25 +85,33 @@ class LoginViewController: UIViewController {
                     self.showError(err!.localizedDescription)
                 }
                 else {
-                // transition to CoursesVC
-                    self.transitionToCoursesVC()
+                    if self.user == nil {
+                        let db = Firestore.firestore()
+                        let collection = db.collection("users")
+                        let currentUser = Auth.auth().currentUser
+                        collection.whereField("uid", isEqualTo: currentUser?.uid).getDocuments { (document, error) in
+                            if let err = error {
+                                print(err)
+                            } else {
+                                let data = document!.documents[0].data()
+                                self.user = User(loggedIn: true, firstName: data["firstname"] as! String, lastName: data["lastname"] as! String, email: (currentUser?.email)!)
+                                
+                                guard let tabBarVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {
+                                       return
+                                }
+                                tabBarVC.user = self.user ?? User(loggedIn: true, firstName: "", lastName: "", email: "")
+                                self.navigationController?.viewControllers[0] = tabBarVC
+                                self.navigationController?.popToRootViewController(animated: true)
+                            }
+                        }
+                    }
+                    else {
+                        self.transitionToTabBarVC(self.user)
+                    }
                 }
             }
         }
-        
-        
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension UIViewController {

@@ -1,30 +1,11 @@
-struct CourseYears {
-    let past = ["iOS_2017_2018", "iOS_2018_2019"]
-    let present = "iOS_2019_2020"
-    let future = "iOS_2020_2021"
-}
-
-struct Project {
-    let name: String
-    let courseYear: String
-    let description: String
-    let videoUrl: String
-    let image: String
-    let gitRepository: String
-}
-
-struct Course {
-    let year: String
-    let gitRepository: String
-    let projects: [Project]
-}
+import Foundation
 
 struct Model {
-    var pastProjects: Array<Array<Project>> = []
-    let pastCourses: Array<Course>
-    let presentCourses: Array<Course>
-    let futureCourses: Array<Course>
-    let courses: Array<Course>
+    var pastProjects: [[Project]] = [[]]
+    let pastCourses: [Course]
+    let presentCourses: [Course]
+    let futureCourses: [Course]
+    let courses: [Course]
 
     let pastProjectsYearOne = [
         Project(name: "Eventy App",
@@ -152,6 +133,7 @@ struct Model {
                 image: "default-project-image",
                 gitRepository: "https://github.com/SwiftFMI/2019_prj_GameLoggerApp")
     ]
+
     let futureProjects = Array<Project>()
         
     init() {
