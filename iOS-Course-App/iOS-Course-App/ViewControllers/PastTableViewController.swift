@@ -10,7 +10,6 @@ import UIKit
 
 class PastTableViewController: UITableViewController {
 
-    var user: User?
     var loggedIn: Bool?
     var model: Model?
     
@@ -26,7 +25,6 @@ class PastTableViewController: UITableViewController {
     }
 
     func setupData() {
-        self.loggedIn = user?.loggedIn
         let decoder = JSONDecoder()
         do {
             self.model = try decoder.decode(Model.self, from: json)
@@ -81,6 +79,7 @@ class PastTableViewController: UITableViewController {
         let course = model?.pastCourses[index.row]
         courseProjectsTVC.projects = course?.projects
         courseProjectsTVC.courseTitle = course?.year
+        courseProjectsTVC.loggedIn = self.loggedIn 
         self.navigationController?.pushViewController(courseProjectsTVC, animated: true)
     }
     

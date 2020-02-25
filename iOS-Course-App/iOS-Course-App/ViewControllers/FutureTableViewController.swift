@@ -10,7 +10,6 @@ import UIKit
 
 class FutureTableViewController: UITableViewController {
 
-    var user: User?
     var loggedIn: Bool?
     var model: Model?
     
@@ -26,7 +25,6 @@ class FutureTableViewController: UITableViewController {
     }
 
     func setupData() {
-        self.loggedIn = user?.loggedIn
         let decoder = JSONDecoder()
         do {
             self.model = try decoder.decode(Model.self, from: json)
@@ -80,6 +78,7 @@ class FutureTableViewController: UITableViewController {
         let course = model?.futureCourses[index.row]
         courseProjectsTVC.projects = course?.projects
         courseProjectsTVC.courseTitle = course?.year
+        courseProjectsTVC.loggedIn = self.loggedIn
         self.navigationController?.pushViewController(courseProjectsTVC, animated: true)
     }
     

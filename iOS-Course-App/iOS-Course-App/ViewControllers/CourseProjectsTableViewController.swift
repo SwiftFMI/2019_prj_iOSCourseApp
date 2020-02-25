@@ -13,7 +13,6 @@ class CourseProjectsTableViewController: UITableViewController {
     var courseTitle: String?
     var projects: [Project]?
     var loggedIn: Bool?
-    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +34,13 @@ class CourseProjectsTableViewController: UITableViewController {
         } else {
             self.title = "Projects"
         }
- 
-        self.loggedIn = user?.loggedIn
     }
     
     func setupElements() {
         Utilities.styleTableView(self.tableView)
         Utilities.resizeTableView(self.tableView)
     }
+
     
     @objc func loginButtonTabbed(sender: UIButton!) {
         guard let loginVC = self.storyboard?.instantiateViewController(identifier: "loginVC") as? LoginViewController else {

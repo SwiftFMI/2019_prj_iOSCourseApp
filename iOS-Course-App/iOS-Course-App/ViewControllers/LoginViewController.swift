@@ -12,6 +12,7 @@ import FirebaseFirestore
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
@@ -39,6 +40,7 @@ class LoginViewController: UIViewController {
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(loginButton)
         Utilities.styleFilledButton(goToSignUpButton)
+        self.activityIndicator.isHidden = true
         
     }
     
@@ -69,6 +71,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func logInButtonTapped(_ sender: Any) {
         
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
         // Validate fields
         let error = validateFields()
         

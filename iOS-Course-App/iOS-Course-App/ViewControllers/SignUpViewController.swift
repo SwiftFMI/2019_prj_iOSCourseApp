@@ -13,6 +13,7 @@ import FirebaseFirestore
 class SignUpViewController: UIViewController {
 
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -35,6 +36,7 @@ class SignUpViewController: UIViewController {
     
     func setupElements() {
         
+        self.activityIndicator.isHidden = true
         errorLabel.alpha = 0
         
         Utilities.styleTextField(firstNameTextField)
@@ -76,6 +78,8 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
         
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
         let error = validateFields()
         
         if error != nil {

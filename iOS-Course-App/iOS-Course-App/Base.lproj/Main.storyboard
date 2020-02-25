@@ -83,7 +83,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="JwY-ge-FUL" kind="show" id="I9V-Pc-6uZ"/>
+                                            <segue destination="JwY-ge-FUL" kind="show" id="OeL-tC-wv6"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzH-4f-Q0r">
@@ -118,6 +118,9 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Jbx-DX-ODf"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zdV-Uh-Sy2">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -135,11 +138,13 @@
                             <constraint firstItem="dAi-hb-SPz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="XSS-cL-vq7"/>
                             <constraint firstItem="lRz-xe-DOP" firstAttribute="centerX" secondItem="dAi-hb-SPz" secondAttribute="centerX" id="d7B-TR-9ba"/>
                             <constraint firstItem="4Th-6Z-RzM" firstAttribute="centerX" secondItem="rg3-wL-hBW" secondAttribute="centerX" id="dd0-b7-l8m"/>
+                            <constraint firstItem="zdV-Uh-Sy2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eAN-Da-y0w"/>
                             <constraint firstItem="4Th-6Z-RzM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fGH-WX-zUp"/>
                             <constraint firstItem="cQS-FE-fvc" firstAttribute="height" secondItem="XgQ-lq-UNP" secondAttribute="height" id="fxr-SA-BDY"/>
                             <constraint firstItem="cQS-FE-fvc" firstAttribute="height" secondItem="jjA-ki-gaf" secondAttribute="height" id="iDU-Ft-SNM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="4Th-6Z-RzM" secondAttribute="bottom" constant="5" id="mUs-dl-yCL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rg3-wL-hBW" secondAttribute="trailing" constant="40" id="ogJ-XG-GsU"/>
+                            <constraint firstItem="zdV-Uh-Sy2" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="r2f-Va-8sv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jjA-ki-gaf" secondAttribute="bottom" id="u2J-rS-AcQ"/>
                             <constraint firstItem="cQS-FE-fvc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="5" id="usc-la-C0r"/>
                             <constraint firstItem="jjA-ki-gaf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vM7-rg-BTB"/>
@@ -149,6 +154,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PTn-EB-W1f"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="zdV-Uh-Sy2" id="sCV-GV-ooQ"/>
                         <outlet property="emailTextField" destination="E1k-Du-vv1" id="4RR-YH-p6T"/>
                         <outlet property="errorLabel" destination="rzH-4f-Q0r" id="4Cu-Ll-7ay"/>
                         <outlet property="goToSignUpButton" destination="9Oh-wg-E33" id="y13-Sq-JnK"/>
@@ -455,6 +461,7 @@
                         <segue destination="EKc-tW-qKB" kind="relationship" relationship="viewControllers" id="WCY-ge-sws"/>
                         <segue destination="Ylg-05-Di0" kind="relationship" relationship="viewControllers" id="t6v-TO-yzC"/>
                         <segue destination="IYn-HO-CEb" kind="relationship" relationship="viewControllers" id="sDA-ts-u0E"/>
+                        <segue destination="zkK-so-6l7" kind="relationship" relationship="viewControllers" id="Qf0-sq-ehX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6g-Hh-ZBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -554,12 +561,17 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="dO2-Rb-kJF"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="1T4-Fn-zPh">
+                                <rect key="frame" x="188.5" y="385.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="g7Q-jx-Yct" firstAttribute="centerX" secondItem="K6u-0C-mT4" secondAttribute="centerX" id="36C-SL-rYT"/>
                             <constraint firstItem="zu7-xA-S0J" firstAttribute="bottom" secondItem="K6u-0C-mT4" secondAttribute="bottom" id="5l2-fY-iQy"/>
+                            <constraint firstItem="1T4-Fn-zPh" firstAttribute="centerX" secondItem="K6u-0C-mT4" secondAttribute="centerX" id="AJ9-hK-Nek"/>
                             <constraint firstItem="FvG-HP-TM3" firstAttribute="bottom" secondItem="K6u-0C-mT4" secondAttribute="bottom" constant="5" id="ApM-4G-UwC"/>
+                            <constraint firstItem="1T4-Fn-zPh" firstAttribute="centerY" secondItem="K6u-0C-mT4" secondAttribute="centerY" id="Gyp-Kr-fMA"/>
                             <constraint firstItem="DwI-8c-6rD" firstAttribute="centerY" secondItem="K6u-0C-mT4" secondAttribute="centerY" id="HRX-tq-Y8H"/>
                             <constraint firstItem="DwI-8c-6rD" firstAttribute="centerX" secondItem="K6u-0C-mT4" secondAttribute="centerX" id="IpH-bH-cVg"/>
                             <constraint firstItem="FvG-HP-TM3" firstAttribute="trailing" secondItem="K6u-0C-mT4" secondAttribute="trailing" constant="-50" id="MHE-d8-NdQ"/>
@@ -581,6 +593,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Jji-7C-zp4"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="1T4-Fn-zPh" id="tJ4-s1-UPp"/>
                         <outlet property="emailTextField" destination="2kk-mh-p8S" id="wJv-n0-VbJ"/>
                         <outlet property="errorLabel" destination="dYT-Gq-sKa" id="UrU-q8-YLP"/>
                         <outlet property="firstNameTextField" destination="cGk-A5-0hK" id="SXJ-tj-fml"/>
@@ -723,19 +736,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Tkw-IG-hg1">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="wMb-tx-8fA">
-                                <rect key="frame" x="79" y="154" width="256" height="256"/>
+                                <rect key="frame" x="143" y="154" width="128" height="128"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPH-zj-QFV">
-                                <rect key="frame" x="169" y="460" width="76" height="21"/>
+                                <rect key="frame" x="169" y="332" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-9I-vFJ" userLabel="Email Label">
-                                <rect key="frame" x="38" y="442.5" width="41" height="21"/>
+                                <rect key="frame" x="38" y="418" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -757,7 +770,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ka1-dy-aj5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="FAl-4W-549"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Profile" image="profile" id="FAl-4W-549"/>
                     <connections>
                         <outlet property="emailLaek" destination="5aa-9I-vFJ" id="GYG-kq-Syf"/>
                         <outlet property="profilePicture" destination="wMb-tx-8fA" id="fJe-bK-Sxn"/>

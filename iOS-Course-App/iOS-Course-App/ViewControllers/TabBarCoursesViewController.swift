@@ -28,9 +28,9 @@ class TabBarCoursesViewController : UITabBarController {
         
         self.navigationItem.hidesBackButton = true
         if let tabs = self.viewControllers {
-            (tabs[0] as? PastTableViewController)?.user = self.user
-            (tabs[1] as? PresentCoursesTableViewController)?.user = self.user
-            (tabs[2] as? FutureTableViewController)?.user = self.user
+            (tabs[0] as? PastTableViewController)?.loggedIn = self.user.loggedIn
+            (tabs[1] as? PresentCoursesTableViewController)?.loggedIn = self.user.loggedIn
+            (tabs[2] as? FutureTableViewController)?.loggedIn = self.user.loggedIn
         }
         if self.user.loggedIn {
             if var tabs = self.viewControllers {
@@ -42,6 +42,7 @@ class TabBarCoursesViewController : UITabBarController {
                 (self.viewControllers?[3] as? ProfileViewController)?.user = self.user
             }
         }
+    
         self.selectedIndex = 1
     }
 }

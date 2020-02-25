@@ -14,9 +14,9 @@
             filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "playButtonTapped(_:)"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "addLoginHeader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "playButtonTapped(_:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "loginButtonTabbed(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,9 +46,9 @@
             filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "playButtonTapped(_:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "loginButtonTabbed(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -62,9 +62,9 @@
             filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "playButtonTapped(_:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "loginButtonTabbed(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -78,10 +78,10 @@
             filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "playButtonTapped(_:)"
-            landmarkType = "7">
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "ProjectViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -94,10 +94,10 @@
             filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "ProjectViewController"
-            landmarkType = "3">
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "gitRepositoryButtonTapped(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,23 +110,9 @@
             filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "102F9A97-6470-4866-B64F-F889A64BEA72"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "playButtonTapped(_:)"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "gitRepositoryButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -140,9 +126,9 @@
             filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "playButtonTapped(_:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "addLoginHeader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -156,9 +142,9 @@
             filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "playButtonTapped(_:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "addLoginHeader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -172,9 +158,9 @@
             filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "playButtonTapped(_:)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "addLoginHeader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -188,9 +174,9 @@
             filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "playButtonTapped(_:)"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "addLoginHeader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -332,8 +318,8 @@
             filePath = "iOS-Course-App/ViewControllers/TabBarCoursesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "TabBarCoursesViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -348,8 +334,8 @@
             filePath = "iOS-Course-App/ViewControllers/TabBarCoursesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48">
+            startingLineNumber = "51"
+            endingLineNumber = "51">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
