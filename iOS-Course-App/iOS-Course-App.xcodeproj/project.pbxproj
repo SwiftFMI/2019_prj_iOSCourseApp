@@ -30,6 +30,7 @@
 		E56EB2B623FD8FC900ADDA6D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB2B523FD8FC900ADDA6D /* Model.swift */; };
 		E5C83F8E23FE86AF008D068A /* TabBarCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C83F8D23FE86AF008D068A /* TabBarCoursesViewController.swift */; };
 		E5D7622124052D24000A82CC /* jsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7622024052D24000A82CC /* jsonData.swift */; };
+		E5D76223240555D4000A82CC /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D76222240555D4000A82CC /* CoursesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		E56EB2B523FD8FC900ADDA6D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E5C83F8D23FE86AF008D068A /* TabBarCoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoursesViewController.swift; sourceTree = "<group>"; };
 		E5D7622024052D24000A82CC /* jsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonData.swift; sourceTree = "<group>"; };
+		E5D76222240555D4000A82CC /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				6C0BA67B23FEBB7D008558CD /* CourseProjectsTableViewController.swift */,
 				E52CA16A2403C3A700F2FD18 /* WelcomeViewController.swift */,
 				E52CA16C2403CF6500F2FD18 /* ProfileViewController.swift */,
+				E5D76222240555D4000A82CC /* CoursesTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				6C08D06823F95C3E00E5F473 /* SceneDelegate.swift in Sources */,
 				E52CA16D2403CF6500F2FD18 /* ProfileViewController.swift in Sources */,
 				E52CA1742403F5EE00F2FD18 /* Project.swift in Sources */,
+				E5D76223240555D4000A82CC /* CoursesTableViewCell.swift in Sources */,
 				E5C83F8E23FE86AF008D068A /* TabBarCoursesViewController.swift in Sources */,
 				E52CA16B2403C3A700F2FD18 /* WelcomeViewController.swift in Sources */,
 				E52CA1782403F61C00F2FD18 /* User.swift in Sources */,

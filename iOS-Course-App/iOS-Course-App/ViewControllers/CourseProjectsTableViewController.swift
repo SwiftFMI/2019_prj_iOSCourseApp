@@ -10,7 +10,8 @@ import UIKit
 
 class CourseProjectsTableViewController: UITableViewController {
     
-    var projects: Array<Project>?
+    var courseTitle: String?
+    var projects: [Project]?
     var loggedIn: Bool?
     var user: User?
     
@@ -27,7 +28,14 @@ class CourseProjectsTableViewController: UITableViewController {
     }
 
     func setupData() {
-        self.title = "Courses"
+        if let courseTitle = courseTitle {
+            let course = courseTitle.components(separatedBy: "_");
+            let title = course[0] + " " + course[1] + "/" + course[2]
+            self.title = title
+        } else {
+            self.title = "Projects"
+        }
+ 
         self.loggedIn = user?.loggedIn
     }
     
@@ -51,7 +59,12 @@ class CourseProjectsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return projects?.count ?? 1
+        if let projects = projects {
+            if projects.count > 0 {
+                return projects.count
+            }
+        }
+        return 1
     }
 
     
@@ -60,9 +73,16 @@ class CourseProjectsTableViewController: UITableViewController {
         
         Utilities.styleTableViewCell(cell)
         
-        let project = projects?[indexPath.row]
-        cell.textLabel?.text = project?.name
-        cell.imageView?.image = UIImage(named: project?.image ?? "default-project-image")
+        if let projects = projects {
+            if projects.count > 0 {
+                let project = projects[indexPath.row]
+                cell.textLabel?.text = project.name
+                cell.imageView?.image = UIImage(named: project.image)
+            } else {
+                cell.textLabel?.text = "Sorry, no projects to display! Course info comming soon..."
+                cell.imageView?.image = UIImage(named: "default-project-image")
+            }
+        }
         
         return cell
     }
@@ -72,7 +92,12 @@ class CourseProjectsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         self.performSegue(withIdentifier: "projectDetailsSegue", sender:nil)
+         guard let projectDetailsVC = self.storyboard?.instantiateViewController(identifier: "projectDetailsVC") as? ProjectViewController, let index = tableView.indexPathForSelectedRow else {
+              return
+         }
+        let projects = self.projects?[index.row]
+         projectDetailsVC.projectInfo = projects
+         self.navigationController?.pushViewController(projectDetailsVC, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -106,15 +131,6 @@ class CourseProjectsTableViewController: UITableViewController {
         }
         return CGFloat(0)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let index = tableView.indexPathForSelectedRow else {
-            return
-        }
-        let project = projects?[index.row]
-        (segue.destination as? ProjectViewController)?.projectInfo = project
-    }
-    
 
     /*
     // Override to support conditional editing of the table view.

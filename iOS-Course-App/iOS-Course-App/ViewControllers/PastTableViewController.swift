@@ -75,7 +75,13 @@ class PastTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         self.performSegue(withIdentifier: "projectsSegue", sender: nil)
+        guard let courseProjectsTVC = self.storyboard?.instantiateViewController(identifier: "courseProjectsTVC") as? CourseProjectsTableViewController, let index = tableView.indexPathForSelectedRow else {
+             return
+        }
+        let course = model?.pastCourses[index.row]
+        courseProjectsTVC.projects = course?.projects
+        courseProjectsTVC.courseTitle = course?.year
+        self.navigationController?.pushViewController(courseProjectsTVC, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -109,14 +115,7 @@ class PastTableViewController: UITableViewController {
         }
         return CGFloat(0)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let index = tableView.indexPathForSelectedRow else {
-            return
-        }
-        let projects = model?.pastCourses[index.row].projects
-        (segue.destination as? CourseProjectsTableViewController)?.projects = projects
-    }
-    
+     
 
     /*
     // Override to support conditional editing of the table view.
