@@ -1,6 +1,6 @@
 import Foundation
 
-struct Model {
+struct Model: Codable {
     var pastProjects: [[Project]] = [[]]
     let pastCourses: [Course]
     let presentCourses: [Course]

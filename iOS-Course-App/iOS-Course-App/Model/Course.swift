@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Course {
+struct Course: Codable {
     let year: String
     let gitRepository: String
     let projects: [Project]

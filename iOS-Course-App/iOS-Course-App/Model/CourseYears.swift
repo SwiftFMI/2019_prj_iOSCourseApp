@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CourseYears {
+struct CourseYears: Codable {
     let past = ["iOS_2017_2018", "iOS_2018_2019"]
     let present = "iOS_2019_2020"
     let future = "iOS_2020_2021"

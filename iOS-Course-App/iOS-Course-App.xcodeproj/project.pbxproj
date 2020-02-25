@@ -30,6 +30,7 @@
 		E56EB2B223FD892200ADDA6D /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB2B123FD892200ADDA6D /* ProjectViewController.swift */; };
 		E56EB2B623FD8FC900ADDA6D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB2B523FD8FC900ADDA6D /* Model.swift */; };
 		E5C83F8E23FE86AF008D068A /* TabBarCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C83F8D23FE86AF008D068A /* TabBarCoursesViewController.swift */; };
+		E5D7622124052D24000A82CC /* jsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7622024052D24000A82CC /* jsonData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		E56EB2B123FD892200ADDA6D /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		E56EB2B523FD8FC900ADDA6D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E5C83F8D23FE86AF008D068A /* TabBarCoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoursesViewController.swift; sourceTree = "<group>"; };
+		E5D7622024052D24000A82CC /* jsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				E52CA1732403F5EE00F2FD18 /* Project.swift */,
 				E52CA1752403F60900F2FD18 /* CourseYears.swift */,
 				E52CA1772403F61C00F2FD18 /* User.swift */,
+				E5D7622024052D24000A82CC /* jsonData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				E56EB2B623FD8FC900ADDA6D /* Model.swift in Sources */,
 				E56EB2B223FD892200ADDA6D /* ProjectViewController.swift in Sources */,
 				E54238D123FEB76300725551 /* PastTableViewController.swift in Sources */,
+				E5D7622124052D24000A82CC /* jsonData.swift in Sources */,
 				E52CA1722403F5CF00F2FD18 /* Course.swift in Sources */,
 				E52CA1762403F60900F2FD18 /* CourseYears.swift in Sources */,
 				6C08D07A23F95E1500E5F473 /* SignUpViewController.swift in Sources */,
