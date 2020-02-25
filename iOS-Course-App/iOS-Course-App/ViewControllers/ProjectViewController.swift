@@ -2,7 +2,7 @@
 //  ProjectViewController.swift
 //  iOS-Course-App
 //
-//  Created by DemetraStaykova on 19.02.20.
+//  Created by Demetra Staykova on 19.02.20.
 //  Copyright © 2020 TsvetoslavVasev. All rights reserved.
 //
 import WebKit
