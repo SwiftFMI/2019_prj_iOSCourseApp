@@ -12,6 +12,7 @@ class PresentCoursesTableViewController: UITableViewController {
 
     var user: User?
     var loggedIn: Bool?
+    var model: Model?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,12 @@ class PresentCoursesTableViewController: UITableViewController {
 
     func setupData() {
         self.loggedIn = user?.loggedIn
+        let decoder = JSONDecoder()
+        do {
+            self.model = try decoder.decode(Model.self, from: json)
+        } catch let err {
+            print(err)
+        }
     }
     
     func setupElements() {
@@ -49,7 +56,7 @@ class PresentCoursesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Model().presentCourses.count
+        return model?.presentCourses.count ?? 0
     }
 
     
@@ -58,8 +65,8 @@ class PresentCoursesTableViewController: UITableViewController {
         
         Utilities.styleTableViewCell(cell)
         
-        let course = Model().presentCourses[indexPath.row]
-        cell.textLabel?.text = course.year
+        let course = model?.presentCourses[indexPath.row]
+        cell.textLabel?.text = course?.year
         cell.imageView?.image = UIImage(named: "swift")
         
         return cell
@@ -108,7 +115,10 @@ class PresentCoursesTableViewController: UITableViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let projects = Model().presentProjects
+        guard let index = tableView.indexPathForSelectedRow else {
+            return
+        }
+        let projects = model?.presentCourses[index.row].projects
         (segue.destination as? CourseProjectsTableViewController)?.projects = projects
     }
     

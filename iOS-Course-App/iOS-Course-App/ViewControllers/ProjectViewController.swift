@@ -47,7 +47,9 @@ class ProjectViewController: UIViewController {
     
     @IBAction func gitRepositoryButtonTapped(
         _ sender: Any) {
-        let url = URL(string: projectInfo?.gitRepository ?? "github.com/SwiftFMI")!
+        let urlHeader = "http://github.com/SwiftFMI/"
+        let wholeUrl = urlHeader + (projectInfo?.gitRepository ?? "")
+        let url = URL(string: wholeUrl)!
         
         UIApplication.shared.canOpenURL(url)
         UIApplication.shared.open(url, options: [:], completionHandler: nil)

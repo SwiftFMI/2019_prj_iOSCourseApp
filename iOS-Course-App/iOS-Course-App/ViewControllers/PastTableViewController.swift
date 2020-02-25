@@ -12,6 +12,7 @@ class PastTableViewController: UITableViewController {
 
     var user: User?
     var loggedIn: Bool?
+    var model: Model?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,12 @@ class PastTableViewController: UITableViewController {
 
     func setupData() {
         self.loggedIn = user?.loggedIn
+        let decoder = JSONDecoder()
+        do {
+            self.model = try decoder.decode(Model.self, from: json)
+        } catch let err {
+            print(err)
+        }
     }
     
     func setupElements() {
@@ -47,7 +54,7 @@ class PastTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Model().pastCourses.count
+        return model?.pastCourses.count ?? 0
     }
 
     
@@ -56,8 +63,8 @@ class PastTableViewController: UITableViewController {
        
         Utilities.styleTableViewCell(cell)
         
-        let course = Model().pastCourses[indexPath.row]
-        cell.textLabel?.text = course.year
+        let course = model?.pastCourses[indexPath.row]
+        cell.textLabel?.text = course?.year
         cell.imageView?.image = UIImage(named: "swift")
         
         return cell
@@ -106,7 +113,7 @@ class PastTableViewController: UITableViewController {
         guard let index = tableView.indexPathForSelectedRow else {
             return
         }
-        let projects = Model().pastProjects[index.row]
+        let projects = model?.pastCourses[index.row].projects
         (segue.destination as? CourseProjectsTableViewController)?.projects = projects
     }
     
