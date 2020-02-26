@@ -103,6 +103,7 @@ class CourseProjectsTableViewController: UITableViewController {
         
         let projects = self.projects?[index.row]
         projectDetailsVC.projectInfo = projects
+        projectDetailsVC.loggedIn = self.loggedIn
         self.navigationController?.pushViewController(projectDetailsVC, animated: true)
     }
     
