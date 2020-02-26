@@ -107,7 +107,7 @@ class LoginViewController: UIViewController {
                                         let data = document.documents[0].data()
                                         let firstName = data["firstname"] as! String
                                         let lastName = data["lastname"] as! String
-                                        let email = currentUser.email as! String
+                                        let email = currentUser.email!
                                         self.user = User(loggedIn: true, firstName: firstName, lastName: lastName, email: email)
                                         // it's not decoding from json-formatted db, because there's no email field in data, as well as loggedIn information. 
                                         // to do init from decoder, has to change the db storing 
@@ -118,7 +118,7 @@ class LoginViewController: UIViewController {
                                         }
                                         tabBarVC.user = self.user ?? User(loggedIn: true)
                                         self.navigationController?.viewControllers[0] = tabBarVC
-                                        self.navigationController?.popToRootViewController(animated: true)
+                                    self.navigationController?.popToRootViewController(animated: true)
                                     }
                                 }
                             }

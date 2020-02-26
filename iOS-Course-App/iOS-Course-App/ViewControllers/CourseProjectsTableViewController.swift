@@ -18,7 +18,6 @@ class CourseProjectsTableViewController: UITableViewController {
         super.viewDidLoad()
         setupElements()
         setupData()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -39,6 +38,10 @@ class CourseProjectsTableViewController: UITableViewController {
     func setupElements() {
         Utilities.styleTableView(self.tableView)
         Utilities.resizeTableView(self.tableView)
+        
+        if self.projects?.count == 0 {
+            self.tableView.allowsSelection = false
+        }
     }
 
     
@@ -67,18 +70,22 @@ class CourseProjectsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "project", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! CourseProjectTableViewCell
         
         Utilities.styleTableViewCell(cell)
         
         if let projects = projects {
             if projects.count > 0 {
                 let project = projects[indexPath.row]
-                cell.textLabel?.text = project.name
-                cell.imageView?.image = UIImage(named: project.image)
+                cell.projectTitleLabel?.text = project.name
+                cell.projectImageView?.image = UIImage(named: project.image)
+                let years = project.courseYear.components(separatedBy: "_")
+                let info = "winter semester, " + years[1] + "/" + years[2] + " school year"
+                cell.projectInfoLabel.text = info
             } else {
-                cell.textLabel?.text = "Sorry, no projects to display! Course info comming soon..."
-                cell.imageView?.image = UIImage(named: "default-project-image")
+                cell.projectTitleLabel?.text = "Sorry, no projects to display!"
+                cell.projectInfoLabel?.text = "Course info comming soon..."
+                cell.projectImageView?.image = UIImage(named: "default-project-image")
             }
         }
         
@@ -90,12 +97,13 @@ class CourseProjectsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         guard let projectDetailsVC = self.storyboard?.instantiateViewController(identifier: "projectDetailsVC") as? ProjectViewController, let index = tableView.indexPathForSelectedRow else {
+        guard let projectDetailsVC = self.storyboard?.instantiateViewController(identifier: "projectDetailsVC") as? ProjectViewController, let index = tableView.indexPathForSelectedRow else {
               return
-         }
+        }
+        
         let projects = self.projects?[index.row]
-         projectDetailsVC.projectInfo = projects
-         self.navigationController?.pushViewController(projectDetailsVC, animated: true)
+        projectDetailsVC.projectInfo = projects
+        self.navigationController?.pushViewController(projectDetailsVC, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -104,10 +112,6 @@ class CourseProjectsTableViewController: UITableViewController {
                 let frame = tableView.frame
                 let loginImage = UIImage(named: "login")
                 let loginButton = UIButton(frame: CGRect(x: 325,y: 0,width: 25,height: 50))
-                loginButton.tag = section
-                let color = UIColor.init(red: 115/255, green: 150/255, blue: 246/255, alpha: 0)
-                loginButton.setTitle("Login", for: .normal)
-                loginButton.setTitleColor(color, for: .normal)
                 loginButton.setImage(loginImage, for: .normal)
                 loginButton.addTarget(self, action: #selector(loginButtonTabbed), for: .touchUpInside)
                 
@@ -129,7 +133,7 @@ class CourseProjectsTableViewController: UITableViewController {
         }
         return CGFloat(0)
     }
-
+ 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

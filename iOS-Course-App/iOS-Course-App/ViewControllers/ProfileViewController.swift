@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController {
     }
     
     func setupData() {
-        guard let user = user {
+        guard let user = user else {
             return
         }
         self.usernameLabel.text = user.firstName + " " + user.lastName
