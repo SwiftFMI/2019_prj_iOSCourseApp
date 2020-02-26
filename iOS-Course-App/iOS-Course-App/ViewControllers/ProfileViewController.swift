@@ -22,9 +22,12 @@ class ProfileViewController: UIViewController {
     }
     
     func setupData() {
-        //self.usernameLabel.text = (user?.firstName ?? "") + " " + (user?.lastName ?? "")
-       // self.profilePicture.image = UIImage(named: "user")
-       // self.emailLabel.text = user?.email
+        guard let user = user {
+            return
+        }
+        self.usernameLabel.text = user.firstName + " " + user.lastName
+        self.profilePicture.image = UIImage(named: "user")
+        self.emailLabel.text = user.email
     }
     
 

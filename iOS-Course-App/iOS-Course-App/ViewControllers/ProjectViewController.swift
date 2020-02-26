@@ -2,7 +2,7 @@
 //  ProjectViewController.swift
 //  iOS-Course-App
 //
-//  Created by Demetra Staykova on 19.02.20.
+//  Created by DemetraStaykova on 19.02.20.
 //  Copyright © 2020 TsvetoslavVasev. All rights reserved.
 //
 import WebKit
@@ -23,10 +23,11 @@ class ProjectViewController: UIViewController {
     
     var projectInfo: Project?
     var player = AVPlayer()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupData()
-       addLoginHeader()
+        //addLoginHeader()
     }
     
     func setupData() {
@@ -35,8 +36,8 @@ class ProjectViewController: UIViewController {
         }
         let courseYear = project.courseYear.components(separatedBy: "_");
         let year = courseYear[1] + "/" + courseYear[2]
-        projectNameLabel.text = project.name + " " + year
-        projectDescriptionLabel.text = project.description
+        self.projectNameLabel.text = project.name + " " + year
+        self.projectDescriptionLabel.text = project.description
         self.title = "Project"
     }
     
