@@ -15,7 +15,7 @@ class ProjectViewController: UIViewController {
     var loggedIn: Bool?
     
     @IBOutlet weak var videoView: UIView!
-    
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var projectNameLabel: UILabel!
     @IBOutlet weak var projectDescriptionLabel: UILabel!
     @IBOutlet weak var gitRepositoryButton: UIButton!
@@ -27,7 +27,7 @@ class ProjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupData()
-        //addLoginHeader()
+        setupElements()
     }
     
     func setupData() {
@@ -41,26 +41,17 @@ class ProjectViewController: UIViewController {
         self.title = "Project"
     }
     
-    func addLoginHeader() {
+    func setupElements() {
         if let login = loggedIn {
-            if !login {
-                let frame = self.view.frame
-                let loginImage = UIImage(named: "login")
-                let loginButton = UIButton(frame: CGRect(x: 325,y: 0,width: 25,height: 50))
-                let color = UIColor.init(red: 115/255, green: 150/255, blue: 246/255, alpha: 0)
-                loginButton.setTitle("Login", for: .normal)
-                loginButton.setTitleColor(color, for: .normal)
-                loginButton.setImage(loginImage, for: .normal)
-                loginButton.addTarget(self, action: #selector(loginButtonTabbed), for: .touchUpInside)
-                
-                let loginHeader = UIView(frame: CGRect(x: 0,y: 0, width: frame.width, height: frame.height))
-                loginHeader.addSubview(loginButton)
-                self.view.addSubview(loginHeader)
+            if login {
+                loginButton.isHidden = true
             }
+        } else {
+            loginButton.isHidden = false
         }
-    }
+     }
     
-    @objc func loginButtonTabbed(sender: UIButton!) {
+    @IBAction func loginButtonTapped(_ sender: Any) {
         guard let loginVC = self.storyboard?.instantiateViewController(identifier: "loginVC") as? LoginViewController else {
             return
         }

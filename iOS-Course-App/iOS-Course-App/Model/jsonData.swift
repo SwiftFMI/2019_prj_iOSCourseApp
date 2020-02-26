@@ -171,7 +171,7 @@ let json = """
                                 "gitRepository": "/2019_prj_MemeApp"
                         },
                         {
-                                "name": "The Movie DB Viewer App",
+                                "name": "The Movie DB App",
                                 "courseYear": "iOS_2019_2020",
                                 "description": "Филмов каталог със собствена рейтинг система.",
                                 "videoUrl": "",
