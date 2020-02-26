@@ -113,7 +113,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jjA-ki-gaf">
-                                <rect key="frame" x="88.5" y="822" width="237.00000000000006" height="40"/>
+                                <rect key="frame" x="-30" y="822" width="474" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Jbx-DX-ODf"/>
                                 </constraints>
@@ -181,13 +181,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="qj8-ti-tPI">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0xI-Ob-RsX">
                                                 <rect key="frame" x="207" y="404" width="0.0" height="0.0"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="projectName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvQ-Yu-QJe">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="projectName" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvQ-Yu-QJe">
                                                 <rect key="frame" x="145.5" y="30" width="123.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" red="0.043137254899999998" green="0.23529411759999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -203,7 +203,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrj-BY-7gj">
-                                                <rect key="frame" x="300" y="74" width="64" height="50"/>
+                                                <rect key="frame" x="236" y="74" width="128" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="pRd-Zr-4FD"/>
                                                 </constraints>
@@ -265,7 +265,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4WA-rE-unp">
-                                                <rect key="frame" x="88.5" y="778" width="237.00000000000006" height="40"/>
+                                                <rect key="frame" x="-30" y="778" width="474" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="ld9-GU-mBq"/>
                                                 </constraints>
@@ -324,6 +324,13 @@
                                             <constraint firstItem="qj8-ti-tPI" firstAttribute="leading" secondItem="t8o-Mc-3jF" secondAttribute="leading" id="yQM-aD-4Fl"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zL-sX-VCl">
+                                        <rect key="frame" x="346" y="30" width="48" height="48"/>
+                                        <state key="normal" image="login"/>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="rcN-ys-bSW" eventType="touchUpInside" id="J4a-0e-uXv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="t8o-Mc-3jF" secondAttribute="trailing" id="2Qf-nR-STq"/>
@@ -331,6 +338,7 @@
                                     <constraint firstAttribute="bottom" secondItem="t8o-Mc-3jF" secondAttribute="bottom" id="Xj8-lO-oHn"/>
                                     <constraint firstItem="t8o-Mc-3jF" firstAttribute="height" secondItem="VPG-YJ-VCn" secondAttribute="height" priority="250" id="cqt-ep-nSb"/>
                                     <constraint firstItem="t8o-Mc-3jF" firstAttribute="width" secondItem="VPG-YJ-VCn" secondAttribute="width" id="tVC-WM-Vgf"/>
+                                    <constraint firstItem="rvQ-Yu-QJe" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6zL-sX-VCl" secondAttribute="leading" id="tkg-vw-bJh"/>
                                     <constraint firstItem="t8o-Mc-3jF" firstAttribute="top" secondItem="VPG-YJ-VCn" secondAttribute="top" id="wJl-9B-e6F"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ySR-em-ygO"/>
@@ -343,14 +351,17 @@
                             <constraint firstItem="jhy-BW-KXu" firstAttribute="trailing" secondItem="VPG-YJ-VCn" secondAttribute="trailing" id="AeP-qp-rxp"/>
                             <constraint firstItem="jhy-BW-KXu" firstAttribute="bottom" secondItem="VPG-YJ-VCn" secondAttribute="bottom" id="OG9-FV-1ml"/>
                             <constraint firstItem="VPG-YJ-VCn" firstAttribute="top" secondItem="jhy-BW-KXu" secondAttribute="top" id="ZIt-3T-Yle"/>
+                            <constraint firstItem="jhy-BW-KXu" firstAttribute="trailing" secondItem="6zL-sX-VCl" secondAttribute="trailing" constant="20" id="nRP-jE-aKz"/>
                             <constraint firstItem="VPG-YJ-VCn" firstAttribute="leading" secondItem="jhy-BW-KXu" secondAttribute="leading" id="rGd-74-vJ6"/>
                             <constraint firstItem="NSb-vX-Hmr" firstAttribute="bottom" secondItem="D4T-06-x5L" secondAttribute="bottom" constant="-5" id="vxb-Ay-nZq"/>
+                            <constraint firstItem="6zL-sX-VCl" firstAttribute="top" secondItem="jhy-BW-KXu" secondAttribute="top" constant="30" id="zFs-Dz-IJ1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jhy-BW-KXu"/>
                     </view>
                     <navigationItem key="navigationItem" id="SyK-Ti-Psy"/>
                     <connections>
                         <outlet property="gitRepositoryButton" destination="mrj-BY-7gj" id="VNV-fC-fjh"/>
+                        <outlet property="loginButton" destination="6zL-sX-VCl" id="UlQ-cx-XAr"/>
                         <outlet property="projectDescriptionLabel" destination="Ij2-Oe-T5J" id="DV2-WP-Uin"/>
                         <outlet property="projectNameLabel" destination="rvQ-Yu-QJe" id="dxG-Ul-jLr"/>
                         <outlet property="videoView" destination="AoA-Id-aAq" id="sc3-61-IHf"/>
@@ -389,16 +400,16 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="1d8-vH-eIT">
-                                <rect key="frame" x="0.0" y="88" width="414" height="239.00000000000006"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="478"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyo-gO-pdR">
-                                <rect key="frame" x="195" y="257" width="24" height="50"/>
+                                <rect key="frame" x="195" y="496" width="24" height="50"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS courses app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XV-Os-CzL">
-                                <rect key="frame" x="114" y="324" width="186.5" height="29.5"/>
+                                <rect key="frame" x="114" y="563" width="186.5" height="29.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" red="0.0039208196103572845" green="0.0039220647886395454" blue="0.0039204265922307968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -414,7 +425,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-se-Daa">
-                                <rect key="frame" x="107.5" y="658" width="199" height="117"/>
+                                <rect key="frame" x="8" y="541" width="398" height="234"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -542,7 +553,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suLogo" translatesAutoresizingMaskIntoConstraints="NO" id="g7Q-jx-Yct">
-                                <rect key="frame" x="88.5" y="768" width="237.00000000000006" height="40"/>
+                                <rect key="frame" x="-30" y="768" width="474" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="CJO-Wl-HvT"/>
                                 </constraints>
@@ -856,6 +867,7 @@
         <image name="backward" width="24" height="24"/>
         <image name="forward" width="24" height="24"/>
         <image name="git" width="64" height="64"/>
+        <image name="login" width="24" height="24"/>
         <image name="play" width="24" height="24"/>
         <image name="profile" width="24" height="24"/>
         <image name="suLogo" width="237" height="293"/>
