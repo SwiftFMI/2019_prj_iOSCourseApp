@@ -320,7 +320,7 @@
                                             <constraint firstItem="NlQ-wt-mIe" firstAttribute="leading" secondItem="t8o-Mc-3jF" secondAttribute="leading" constant="50" id="rtt-Or-YGj"/>
                                             <constraint firstItem="4WA-rE-unp" firstAttribute="centerX" secondItem="t8o-Mc-3jF" secondAttribute="centerX" id="sYW-Aj-hae"/>
                                             <constraint firstItem="NSb-vX-Hmr" firstAttribute="height" secondItem="D4T-06-x5L" secondAttribute="height" id="wQ5-ia-s28"/>
-                                            <constraint firstItem="4WA-rE-unp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ij2-Oe-T5J" secondAttribute="bottom" id="wVC-OM-53T"/>
+                                            <constraint firstItem="4WA-rE-unp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ij2-Oe-T5J" secondAttribute="bottom" constant="10" id="wVC-OM-53T"/>
                                             <constraint firstItem="qj8-ti-tPI" firstAttribute="leading" secondItem="t8o-Mc-3jF" secondAttribute="leading" id="yQM-aD-4Fl"/>
                                         </constraints>
                                     </view>
