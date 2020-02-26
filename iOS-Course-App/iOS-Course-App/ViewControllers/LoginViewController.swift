@@ -64,9 +64,10 @@ class LoginViewController: UIViewController {
     func transitionToTabBarVC(_ user: User?) {
         guard let tabBarVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {
                return
-           }
-        tabBarVC.user = user ?? User(loggedIn: true, firstName: "", lastName: "", email: "")
-        self.navigationController?.pushViewController(tabBarVC, animated: true)
+        }
+        tabBarVC.user = user ?? User(loggedIn: true)
+        self.navigationController?.viewControllers[0] = tabBarVC
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func logInButtonTapped(_ sender: Any) {
@@ -85,32 +86,43 @@ class LoginViewController: UIViewController {
             // Sign In
             Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
             
-                if err != nil {
-                    self.showError(err!.localizedDescription)
+                if let err = err {
+                    self.showError(err.localizedDescription)
                 }
                 else {
-                    if self.user == nil {
+                    if let user = self.user {
+                        self.transitionToTabBarVC(user)
+                    } else {
+
                         let db = Firestore.firestore()
                         let collection = db.collection("users")
                         let currentUser = Auth.auth().currentUser
-                        collection.whereField("uid", isEqualTo: currentUser?.uid).getDocuments { (document, error) in
-                            if let err = error {
-                                print(err)
-                            } else {
-                                let data = document!.documents[0].data()
-                                self.user = User(loggedIn: true, firstName: data["firstname"] as! String, lastName: data["lastname"] as! String, email: (currentUser?.email)!)
-                                
-                                guard let tabBarVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {
-                                       return
+                        if let currentUser = currentUser {
+                            let uid = currentUser.uid // as String
+                            collection.whereField("uid", isEqualTo: uid).getDocuments { (document, error) in
+                                if let err = error {
+                                    print(err)
+                                } else {
+                                    if let document = document {
+                                        let data = document.documents[0].data()
+                                        let firstName = data["firstname"] as! String
+                                        let lastName = data["lastname"] as! String
+                                        let email = currentUser.email as! String
+                                        self.user = User(loggedIn: true, firstName: firstName, lastName: lastName, email: email)
+                                        // it's not decoding from json-formatted db, because there's no email field in data, as well as loggedIn information. 
+                                        // to do init from decoder, has to change the db storing 
+
+                                        //self.transitionToTabBarVC(self.user)
+                                        guard let tabBarVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {
+                                            return
+                                        }
+                                        tabBarVC.user = self.user ?? User(loggedIn: true)
+                                        self.navigationController?.viewControllers[0] = tabBarVC
+                                        self.navigationController?.popToRootViewController(animated: true)
+                                    }
                                 }
-                                tabBarVC.user = self.user ?? User(loggedIn: true, firstName: "", lastName: "", email: "")
-                                self.navigationController?.viewControllers[0] = tabBarVC
-                                self.navigationController?.popToRootViewController(animated: true)
                             }
                         }
-                    }
-                    else {
-                        self.transitionToTabBarVC(self.user)
                     }
                 }
             }

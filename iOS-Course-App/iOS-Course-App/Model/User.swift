@@ -9,12 +9,12 @@
 import Foundation
 
 struct User: Codable {
-    var loggedIn: Bool = false
-    var firstName: String = ""
-    var lastName: String = ""
-    var email: String = ""
+    var loggedIn: Bool
+    var firstName: String
+    var lastName: String
+    var email: String
     
-    init(loggedIn: Bool, firstName: String, lastName: String, email: String) {
+    init(loggedIn: Bool = false, firstName: String = "", lastName: String = "", email: String = "") {
         self.loggedIn = loggedIn
         self.firstName = firstName
         self.lastName = lastName
