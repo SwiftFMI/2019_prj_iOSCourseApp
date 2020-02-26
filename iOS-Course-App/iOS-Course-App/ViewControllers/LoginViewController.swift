@@ -69,6 +69,14 @@ class LoginViewController: UIViewController {
         self.navigationController?.viewControllers[0] = tabBarVC
         self.navigationController?.popToRootViewController(animated: true)
     }
+
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        guard let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "signUpVC") as? SignUpViewController else {
+            return
+        }
+        self.navigationController?.viewControllers = [self]
+        self.navigationController?.pushViewController(signUpVC, animated: true)
+    }
     
     @IBAction func logInButtonTapped(_ sender: Any) {
         

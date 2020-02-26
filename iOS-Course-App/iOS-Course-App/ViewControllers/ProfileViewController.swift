@@ -25,9 +25,10 @@ class ProfileViewController: UIViewController {
         guard let user = user else {
             return
         }
-        self.usernameLabel.text = user.firstName + " " + user.lastName
-        self.profilePicture.image = UIImage(named: "user")
-        self.emailLabel.text = user.email
+        self.usernameLabel?.text = user.firstName + " " + user.lastName
+        self.profilePicture?.image = UIImage(named: "user")
+        self.emailLabel?.text = user.email
+        self.title = "Profile"
     }
     
 

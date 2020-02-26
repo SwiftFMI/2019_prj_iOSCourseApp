@@ -67,8 +67,7 @@ class SignUpViewController: UIViewController {
     }
     
     func transitionToLogin() {
-        let size = self.navigationController?.viewControllers.count
-        let rootVC = self.navigationController?.viewControllers[(size ?? 2)-2] as! LoginViewController
+        let rootVC = self.navigationController?.viewControllers.first as! LoginViewController
         rootVC.emailTextField.text = self.emailTextField.text
         rootVC.passwordTextField.text = self.passwordTextField.text
         rootVC.user = self.user
@@ -84,9 +83,10 @@ class SignUpViewController: UIViewController {
         
         if error != nil {
             showError(error!)
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
         }
         else {
-            
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)

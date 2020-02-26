@@ -34,15 +34,16 @@ class TabBarCoursesViewController : UITabBarController {
         }
         if self.user.loggedIn {
             if var tabs = self.viewControllers {
-                let profileVC = ProfileViewController()
+                guard let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "profileVC") as? ProfileViewController else {
+                    return
+                }
                 profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile"), tag: 3)
                 tabs.append(profileVC)
                 self.viewControllers = tabs
-                
+                self.viewControllers?[3] = UINavigationController(rootViewController: tabs[3])
                 (self.viewControllers?[3] as? ProfileViewController)?.user = self.user
             }
         }
-    
         self.selectedIndex = 1
     }
 }
