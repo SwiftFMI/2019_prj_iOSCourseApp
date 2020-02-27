@@ -354,6 +354,38 @@
             endingLineNumber = "64"
             landmarkName = "transitionToLogin()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7C456E77-DFCA-4AEC-8913-6AA7008D0FB3 - ed7a3a941189c384"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Course_App.SignUpViewController.transitionToLogin() -&gt; ()"
+                  moduleName = "iOS-Course-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "400">
+               </Location>
+               <Location
+                  uuid = "7C456E77-DFCA-4AEC-8913-6AA7008D0FB3 - ed7a3a941189c384"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Course_App.SignUpViewController.transitionToLogin() -&gt; ()"
+                  moduleName = "iOS-Course-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "3169">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -370,38 +402,6 @@
             endingLineNumber = "65"
             landmarkName = "transitionToLogin()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DFBB33E3-9F22-410D-89A3-00F06F110861 - ed7a3a941189c384"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_Course_App.SignUpViewController.transitionToLogin() -&gt; ()"
-                  moduleName = "iOS-Course-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "50">
-               </Location>
-               <Location
-                  uuid = "DFBB33E3-9F22-410D-89A3-00F06F110861 - ed7a3a941189c384"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_Course_App.SignUpViewController.transitionToLogin() -&gt; ()"
-                  moduleName = "iOS-Course-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "3373">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -674,6 +674,38 @@
             endingLineNumber = "87"
             landmarkName = "signUpButtonTapped(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A194142A-4831-4654-9A3B-4ABFFD6363FA - e20e1dae123faaf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Course_App.SignUpViewController.signUpButtonTapped(Any) -&gt; ()"
+                  moduleName = "iOS-Course-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "4760">
+               </Location>
+               <Location
+                  uuid = "A194142A-4831-4654-9A3B-4ABFFD6363FA - 49abc689ea33d87"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOS_Course_App.SignUpViewController.signUpButtonTapped(Any) -&gt; ()"
+                  moduleName = "iOS-Course-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "406">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -702,9 +734,9 @@
                   urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "4554">
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "4760">
                </Location>
                <Location
                   uuid = "6C7BCA0B-0B61-4CF6-A2A1-B1B5CBAA27D2 - 49abc689ea33d87"
@@ -717,8 +749,8 @@
                   urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
                   offsetFromSymbolStart = "406">
                </Location>
             </Locations>
@@ -738,38 +770,6 @@
             endingLineNumber = "89"
             landmarkName = "signUpButtonTapped(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B6806943-3579-4D6B-8DD1-A007D0B0DD34 - e20e1dae123faaf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_Course_App.SignUpViewController.signUpButtonTapped(Any) -&gt; ()"
-                  moduleName = "iOS-Course-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "4554">
-               </Location>
-               <Location
-                  uuid = "B6806943-3579-4D6B-8DD1-A007D0B0DD34 - 49abc689ea33d87"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOS_Course_App.SignUpViewController.signUpButtonTapped(Any) -&gt; ()"
-                  moduleName = "iOS-Course-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "406">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -914,6 +914,38 @@
             endingLineNumber = "100"
             landmarkName = "signUpButtonTapped(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6A29AAE8-520D-4708-8AD8-7DBFC58D8E9D - 49abc689ea33d87"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOS_Course_App.SignUpViewController.signUpButtonTapped(Any) -&gt; ()"
+                  moduleName = "iOS-Course-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "1289">
+               </Location>
+               <Location
+                  uuid = "6A29AAE8-520D-4708-8AD8-7DBFC58D8E9D - e69b3e99ea170126"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOS_Course_App.SignUpViewController.signUpButtonTapped(Any) -&gt; ()"
+                  moduleName = "iOS-Course-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "87">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -930,38 +962,6 @@
             endingLineNumber = "101"
             landmarkName = "signUpButtonTapped(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "485DE950-DA31-4BBA-8943-ED0F3917660A - 49abc689ea33d87"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOS_Course_App.SignUpViewController.signUpButtonTapped(Any) -&gt; ()"
-                  moduleName = "iOS-Course-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "614">
-               </Location>
-               <Location
-                  uuid = "485DE950-DA31-4BBA-8943-ED0F3917660A - e69b3e99ea170126"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOS_Course_App.SignUpViewController.signUpButtonTapped(Any) -&gt; ()"
-                  moduleName = "iOS-Course-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/grade/Desktop/2019_prj_iOSCourseApp/iOS-Course-App/iOS-Course-App/ViewControllers/SignUpViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1169,6 +1169,182 @@
             startingLineNumber = "69"
             endingLineNumber = "69"
             landmarkName = "signUpButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "549FBF95-3684-45DE-B508-4ACAC30845B6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "playButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9383FFD9-CA89-4F65-B0E7-7410A6002E35"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "playButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E28BD940-E099-45C3-9549-39EC90F78F50"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "playButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A42E701-9ABE-410F-9115-544613BDACD1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "playButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56D00D35-D612-466D-8EE9-B82E654EC117"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "playButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C8F0EF6-3F8E-4F48-BFF5-EBF030158FF0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "playButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95F9EB2C-8DA0-4933-9E3A-02D6611AFCD9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "playButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B10CD011-319C-49AF-BB59-E26DD095B242"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "playButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B91B961-22C5-40F5-A943-70E1B0AAE698"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "playButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BED85766-4636-4742-871A-DA42214A33ED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "playButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3EBD486E-25AE-454E-B822-4BFBFD9DB61A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Course-App/ViewControllers/ProjectViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "playButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

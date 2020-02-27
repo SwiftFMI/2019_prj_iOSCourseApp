@@ -78,31 +78,30 @@ class ProjectViewController: UIViewController {
         var videoUrl = URL(string: "")
         if let url = projectInfo?.videoUrl {
             if url != "" {
-                videoUrl = NSURL(string: url)! as URL
+                videoUrl = URL(string: url)!
             }
             else {
-               videoUrl = NSURL(string: "https://www.youtube.com/watch?v=nyp_PczrqFE")! as URL
+               videoUrl = URL(string: "https://devstreaming-cdn.apple.com/videos/app_store/app-store-product-page/hls_vod_mvp.m3u8")
             }
         } else {
-           videoUrl = NSURL(string: "https://devstreaming-cdn.apple.com/videos/app_store/app-store-product-page/hls_vod_mvp.m3u8")! as URL
+           videoUrl = URL(string: "https://www.youtube.com/watch?v=nyp_PczrqFE")
         }
-        
+ /*
         webView.configuration.allowsInlineMediaPlayback = true
         webView.configuration.mediaTypesRequiringUserActionForPlayback = []
         let request = URLRequest(url: videoUrl!)
         webView.load(request)
-  
-    /* alternative player, not supportin youtube
-         
-        let videoUrl = NSURL(string: projectInfo?.videoUrl ?? "https://devstreaming-cdn.apple.com/videos/app_store/app-store-product-page/hls_vod_mvp.m3u8")! as URL
-        player = AVPlayer(url: videoUrl)
+*/
+
+        // alternative player, not supporting youtube
+        player = AVPlayer(url: videoUrl!)
         let playerController = AVPlayerViewController()
         playerController.player = player
         self.showDetailViewController(playerController, sender: nil)
-      playerController.view.frame = self.view.frame
+        playerController.view.frame = self.view.frame
         self.view.addSubview(playerController.view)
         player.play()
-*/
+
     }
 
     override var prefersStatusBarHidden: Bool {
