@@ -54,13 +54,6 @@ class LoginViewController: UIViewController {
         return nil
     }
     
-    func showError(_ message: String) {
-        errorLabel.text = message
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     func transitionToTabBarVC(_ user: User?) {
         guard let tabBarVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {
                return
@@ -74,7 +67,6 @@ class LoginViewController: UIViewController {
         guard let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "signUpVC") as? SignUpViewController else {
             return
         }
-        self.navigationController?.viewControllers = [self]
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
@@ -86,7 +78,7 @@ class LoginViewController: UIViewController {
         let error = validateFields()
         
         if error != nil {
-            showError(error!)
+            showError(viewController: self, errorLabel: self.errorLabel, message: error!)
             self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
             
@@ -98,7 +90,9 @@ class LoginViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
             
                 if let err = err {
-                    self.showError(err.localizedDescription)
+                    showError(viewController: self, errorLabel: self.errorLabel, message: err.localizedDescription)
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
                 }
                 else {
                     if let user = self.user {
@@ -112,7 +106,9 @@ class LoginViewController: UIViewController {
                             let uid = currentUser.uid // as String
                             collection.whereField("uid", isEqualTo: uid).getDocuments { (document, error) in
                                 if let err = error {
-                                    self.showError(err.localizedDescription)
+                                    showError(viewController: self, errorLabel: self.errorLabel, message: err.localizedDescription)
+                                    self.activityIndicator.stopAnimating()
+                                    self.activityIndicator.isHidden = true
                                 } else {
                                     if let document = document {
                                         let data = document.documents[0].data()

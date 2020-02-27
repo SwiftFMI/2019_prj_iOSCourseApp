@@ -58,20 +58,14 @@ class SignUpViewController: UIViewController {
         return nil
     }
     
-    func showError(_ message: String) {
-        errorLabel.text = message
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     func transitionToLogin() {
-        let rootVC = self.navigationController?.viewControllers.first as! LoginViewController
+        let numberOfControllers = self.navigationController?.viewControllers.count
+        
+        let rootVC = self.navigationController?.viewControllers[(numberOfControllers ?? 2) - 2] as! LoginViewController
         rootVC.emailTextField.text = self.emailTextField.text
         rootVC.passwordTextField.text = self.passwordTextField.text
         rootVC.user = self.user
-        self.navigationController?.viewControllers[0] = rootVC
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popToViewController(rootVC, animated: true)
     }
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
@@ -81,7 +75,7 @@ class SignUpViewController: UIViewController {
         let error = validateFields()
         
         if error != nil {
-            showError(error!)
+             showError(viewController: self, errorLabel: self.errorLabel, message: error!)
             self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
         }
@@ -90,12 +84,14 @@ class SignUpViewController: UIViewController {
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            // Create user
+            
             Auth.auth().createUser(withEmail: email , password: password) { (result, err) in
                 
                 // CHeck for errors
                 if err != nil {
-                    self.showError("Error creating user")
+                     showError(viewController: self, errorLabel: self.errorLabel, message: "Error creating user")
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
                 }
                 else {
                     
@@ -104,12 +100,14 @@ class SignUpViewController: UIViewController {
                     db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "uid": result!.user.uid]) { (error) in
                         
                         if error != nil {
-                            self.showError("Error saving user data")
+                            showError(viewController: self, errorLabel: self.errorLabel, message: "Error saving user data")
+                            self.activityIndicator.stopAnimating()
+                            self.activityIndicator.isHidden = true
                         }
                     }
                     
                     self.user = User(loggedIn: true, firstName: firstName, lastName: lastName, email: email)
-                    // Transition to home screen
+
                     self.transitionToLogin()
                 }
             }
