@@ -12,10 +12,10 @@ import AVFoundation
 
 class ProjectViewController: UIViewController {
     
-    var loggedIn: Bool?
+    var user: User?
     
     @IBOutlet weak var videoView: UIView!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var headerButton: UIButton!
     @IBOutlet weak var projectNameLabel: UILabel!
     @IBOutlet weak var projectDescriptionLabel: UILabel!
     @IBOutlet weak var gitRepositoryButton: UIButton!
@@ -42,21 +42,26 @@ class ProjectViewController: UIViewController {
     }
     
     func setupElements() {
-        if let login = loggedIn {
-            if login {
-                loginButton.isHidden = true
+        if let user = self.user {
+            if user.loggedIn {
+                headerButton.setImage(UIImage(named: "profile"), for: .normal)
             }
         } else {
-            loginButton.isHidden = false
+            headerButton.setImage(UIImage(named: "login"), for: .normal)
         }
      }
     
-    @IBAction func loginButtonTapped(_ sender: Any) {
-        guard let loginVC = self.storyboard?.instantiateViewController(identifier: "loginVC") as? LoginViewController else {
+    @IBAction func headerButtonTapped(_ sender: Any) {
+        guard let user = self.user, let loginVC = self.storyboard?.instantiateViewController(identifier: "loginVC") as? LoginViewController, let profileVC = self.storyboard?.instantiateViewController(identifier: "profileVC") as? ProfileViewController else {
             return
         }
         
-        self.navigationController?.pushViewController(loginVC, animated: true)
+        if user.loggedIn {
+            profileVC.user = self.user
+            self.navigationController?.pushViewController(profileVC, animated: true)
+        } else {
+            self.navigationController?.pushViewController(loginVC, animated: true)
+        }
     }
     
     @IBAction func gitRepositoryButtonTapped(

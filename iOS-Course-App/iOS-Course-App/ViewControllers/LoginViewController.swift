@@ -87,6 +87,9 @@ class LoginViewController: UIViewController {
         
         if error != nil {
             showError(error!)
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+            
         }
         else {
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -109,7 +112,7 @@ class LoginViewController: UIViewController {
                             let uid = currentUser.uid // as String
                             collection.whereField("uid", isEqualTo: uid).getDocuments { (document, error) in
                                 if let err = error {
-                                    print(err)
+                                    self.showError(err.localizedDescription)
                                 } else {
                                     if let document = document {
                                         let data = document.documents[0].data()

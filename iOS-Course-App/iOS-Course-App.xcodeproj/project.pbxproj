@@ -20,7 +20,6 @@
 		6C0BA67C23FEBB7E008558CD /* CourseProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0BA67B23FEBB7D008558CD /* CourseProjectsTableViewController.swift */; };
 		E5172FBA2406954D0061FBD9 /* CourseProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5172FB92406954D0061FBD9 /* CourseProjectTableViewCell.swift */; };
 		E52CA16B2403C3A700F2FD18 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52CA16A2403C3A700F2FD18 /* WelcomeViewController.swift */; };
-		E52CA16D2403CF6500F2FD18 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52CA16C2403CF6500F2FD18 /* ProfileViewController.swift */; };
 		E52CA1722403F5CF00F2FD18 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52CA1712403F5CF00F2FD18 /* Course.swift */; };
 		E52CA1742403F5EE00F2FD18 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52CA1732403F5EE00F2FD18 /* Project.swift */; };
 		E52CA1782403F61C00F2FD18 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52CA1772403F61C00F2FD18 /* User.swift */; };
@@ -29,6 +28,8 @@
 		E54238D323FEB7E500725551 /* FutureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54238D223FEB7E500725551 /* FutureTableViewController.swift */; };
 		E56EB2B223FD892200ADDA6D /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB2B123FD892200ADDA6D /* ProjectViewController.swift */; };
 		E56EB2B623FD8FC900ADDA6D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EB2B523FD8FC900ADDA6D /* Model.swift */; };
+		E5A066402407B9D600CDC92A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A0663F2407B9D600CDC92A /* ProfileViewController.swift */; };
+		E5A066422407C0A800CDC92A /* icons8-swift-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A066412407C0A800CDC92A /* icons8-swift-128.png */; };
 		E5C83F8E23FE86AF008D068A /* TabBarCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C83F8D23FE86AF008D068A /* TabBarCoursesViewController.swift */; };
 		E5D7622124052D24000A82CC /* jsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7622024052D24000A82CC /* jsonData.swift */; };
 /* End PBXBuildFile section */
@@ -49,9 +50,8 @@
 		6C08D08023F9753700E5F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C0BA67B23FEBB7D008558CD /* CourseProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProjectsTableViewController.swift; sourceTree = "<group>"; };
 		B2D64C864F45310F71EE36C9 /* Pods_iOS_Course_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Course_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5172FB92406954D0061FBD9 /* CourseProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProjectTableViewCell.swift; sourceTree = "<group>"; };
+		E5172FB92406954D0061FBD9 /* CourseProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CourseProjectTableViewCell.swift; path = "../New Group/CourseProjectTableViewCell.swift"; sourceTree = "<group>"; };
 		E52CA16A2403C3A700F2FD18 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		E52CA16C2403CF6500F2FD18 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E52CA1712403F5CF00F2FD18 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		E52CA1732403F5EE00F2FD18 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		E52CA1772403F61C00F2FD18 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -60,6 +60,8 @@
 		E54238D223FEB7E500725551 /* FutureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureTableViewController.swift; sourceTree = "<group>"; };
 		E56EB2B123FD892200ADDA6D /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		E56EB2B523FD8FC900ADDA6D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E5A0663F2407B9D600CDC92A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E5A066412407C0A800CDC92A /* icons8-swift-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-swift-128.png"; sourceTree = "<group>"; };
 		E5C83F8D23FE86AF008D068A /* TabBarCoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoursesViewController.swift; sourceTree = "<group>"; };
 		E5D7622024052D24000A82CC /* jsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,10 +108,10 @@
 		6C08D06423F95C3E00E5F473 /* iOS-Course-App */ = {
 			isa = PBXGroup;
 			children = (
+				E5A0663E2407AC3900CDC92A /* View */,
 				E52CA1702403F5B400F2FD18 /* Model */,
 				6C08D07D23F9619300E5F473 /* ViewControllers */,
 				6C08D06523F95C3E00E5F473 /* AppDelegate.swift */,
-				E5172FB92406954D0061FBD9 /* CourseProjectTableViewCell.swift */,
 				6C08D06723F95C3E00E5F473 /* SceneDelegate.swift */,
 				6C08D06B23F95C3E00E5F473 /* Main.storyboard */,
 				6C08D07E23F96DC300E5F473 /* Utilities.swift */,
@@ -117,6 +119,7 @@
 				6C08D07023F95C4200E5F473 /* LaunchScreen.storyboard */,
 				6C08D08023F9753700E5F473 /* GoogleService-Info.plist */,
 				6C08D07323F95C4200E5F473 /* Info.plist */,
+				E5A066412407C0A800CDC92A /* icons8-swift-128.png */,
 			);
 			path = "iOS-Course-App";
 			sourceTree = "<group>";
@@ -133,7 +136,7 @@
 				E54238D223FEB7E500725551 /* FutureTableViewController.swift */,
 				6C0BA67B23FEBB7D008558CD /* CourseProjectsTableViewController.swift */,
 				E52CA16A2403C3A700F2FD18 /* WelcomeViewController.swift */,
-				E52CA16C2403CF6500F2FD18 /* ProfileViewController.swift */,
+				E5A0663F2407B9D600CDC92A /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -156,6 +159,14 @@
 				E5D7622024052D24000A82CC /* jsonData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E5A0663E2407AC3900CDC92A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5172FB92406954D0061FBD9 /* CourseProjectTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C08D07223F95C4200E5F473 /* LaunchScreen.storyboard in Resources */,
+				E5A066422407C0A800CDC92A /* icons8-swift-128.png in Resources */,
 				6C08D08123F9753700E5F473 /* GoogleService-Info.plist in Resources */,
 				6C08D06F23F95C4200E5F473 /* Assets.xcassets in Resources */,
 				6C08D06D23F95C3E00E5F473 /* Main.storyboard in Resources */,
@@ -283,11 +295,11 @@
 				E54238D123FEB76300725551 /* PastTableViewController.swift in Sources */,
 				E5D7622124052D24000A82CC /* jsonData.swift in Sources */,
 				E52CA1722403F5CF00F2FD18 /* Course.swift in Sources */,
+				E5A066402407B9D600CDC92A /* ProfileViewController.swift in Sources */,
 				6C08D07A23F95E1500E5F473 /* SignUpViewController.swift in Sources */,
 				E54238D323FEB7E500725551 /* FutureTableViewController.swift in Sources */,
 				6C08D07C23F95E5700E5F473 /* LoginViewController.swift in Sources */,
 				6C08D06823F95C3E00E5F473 /* SceneDelegate.swift in Sources */,
-				E52CA16D2403CF6500F2FD18 /* ProfileViewController.swift in Sources */,
 				E52CA1742403F5EE00F2FD18 /* Project.swift in Sources */,
 				E5C83F8E23FE86AF008D068A /* TabBarCoursesViewController.swift in Sources */,
 				E5172FBA2406954D0061FBD9 /* CourseProjectTableViewCell.swift in Sources */,

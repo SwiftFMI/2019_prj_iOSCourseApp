@@ -50,7 +50,6 @@ class Utilities {
         cell.layer.borderColor = UIColor.init(red: 59/255, green: 98/255, blue: 125/255, alpha: 0).cgColor
         cell.layer.backgroundColor = UIColor.clear.cgColor
         cell.indentationLevel = 1
-        cell.textLabel?.textAlignment = .left
     }
     
     static func styleTableView(_ tableView: UITableView) {

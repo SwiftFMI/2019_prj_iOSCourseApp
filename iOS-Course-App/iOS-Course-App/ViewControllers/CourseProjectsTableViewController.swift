@@ -12,7 +12,7 @@ class CourseProjectsTableViewController: UITableViewController {
     
     var courseTitle: String?
     var projects: [Project]?
-    var loggedIn: Bool?
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +45,16 @@ class CourseProjectsTableViewController: UITableViewController {
     }
 
     
-    @objc func loginButtonTabbed(sender: UIButton!) {
-        guard let loginVC = self.storyboard?.instantiateViewController(identifier: "loginVC") as? LoginViewController else {
+    @objc func headerButtonTabbed(sender: UIButton!) {
+        guard let user = self.user, let loginVC = self.storyboard?.instantiateViewController(identifier: "loginVC") as? LoginViewController, let profileVC = self.storyboard?.instantiateViewController(identifier: "profileVC") as? ProfileViewController else {
             return
         }
-        self.navigationController?.pushViewController(loginVC, animated: true)
+        if user.loggedIn {
+            profileVC.user = self.user
+            self.navigationController?.pushViewController(profileVC, animated: true)
+        } else {
+            self.navigationController?.pushViewController(loginVC, animated: true)
+        }
     }
     // MARK: - Table view data source
     
@@ -103,34 +108,37 @@ class CourseProjectsTableViewController: UITableViewController {
         
         let projects = self.projects?[index.row]
         projectDetailsVC.projectInfo = projects
-        projectDetailsVC.loggedIn = self.loggedIn
+        projectDetailsVC.user = self.user
         self.navigationController?.pushViewController(projectDetailsVC, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if let login = loggedIn {
-            if !login {
-                let frame = tableView.frame
+       override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let user = self.user {
+            let frame = tableView.frame
+            let headerButton = UIButton(frame: CGRect(x: 325,y: 0,width: 35,height: 50))
+            
+            if !user.loggedIn {
                 let loginImage = UIImage(named: "login")
-                let loginButton = UIButton(frame: CGRect(x: 325,y: 0,width: 25,height: 50))
-                loginButton.setImage(loginImage, for: .normal)
-                loginButton.addTarget(self, action: #selector(loginButtonTabbed), for: .touchUpInside)
+                headerButton.setImage(loginImage, for: .normal)
                 
-                let loginHeader = UIView(frame: CGRect(x: 0,y: 0, width: frame.width, height: frame.height))
-                loginHeader.addSubview(loginButton)
-                
-                return loginHeader
+            } else {
+                let profileImage = UIImage(named: "profile")
+                headerButton.setImage(profileImage, for: .normal)
             }
+            headerButton.addTarget(self, action: #selector(headerButtonTabbed), for: .touchUpInside)
+            let header = UIView(frame: CGRect(x: 0,y: 0, width: frame.width, height: frame.height))
+            header.addSubview(headerButton)
+                
+            return header
         }
         
         return UIView()
     }
     
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if let login = loggedIn {
-            if !login {
-                 return CGFloat(50)
-            }
+        if let _ = self.user {
+             return CGFloat(50)
         }
         return CGFloat(0)
     }

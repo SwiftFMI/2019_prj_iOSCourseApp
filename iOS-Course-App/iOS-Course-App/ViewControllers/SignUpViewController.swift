@@ -60,7 +60,6 @@ class SignUpViewController: UIViewController {
     
     func showError(_ message: String) {
         errorLabel.text = message
-        errorLabel.text = message
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
