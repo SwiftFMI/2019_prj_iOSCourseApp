@@ -90,7 +90,8 @@ class FutureTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let user = self.user {
             let frame = tableView.frame
-            let headerButton = UIButton(frame: CGRect(x: 325,y: 0,width: 35,height: 50))
+            let headerButton = UIButton(frame: CGRect(x: tableView.frame.width - 50,y: 0,width: 35,height: 50))
+            headerButton.translatesAutoresizingMaskIntoConstraints = true
             
             if !user.loggedIn {
                 let loginImage = UIImage(named: "login")
