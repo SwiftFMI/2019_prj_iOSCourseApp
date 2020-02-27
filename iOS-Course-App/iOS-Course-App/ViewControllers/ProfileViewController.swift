@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
     var user: User?
     
     override func viewDidLoad() {
