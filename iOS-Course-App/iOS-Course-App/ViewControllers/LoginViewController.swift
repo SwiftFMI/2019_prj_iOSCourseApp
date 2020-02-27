@@ -8,23 +8,31 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var goToSignUpButton: UIButton!
     
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpElements()
-        self.title = "Login"
+        setupElements()
+        setupData()
         self.hideKeyboardWhenTappedAround()
-        // Do any additional setup after loading the view.
     }
-    func setUpElements() {
+    
+    func setupData() {
+        self.title = "Login"
+    }
+    
+    func setupElements() {
         
         errorLabel.alpha = 0
         
@@ -32,6 +40,7 @@ class LoginViewController: UIViewController {
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(loginButton)
         Utilities.styleFilledButton(goToSignUpButton)
+        self.activityIndicator.isHidden = true
         
     }
     
@@ -45,25 +54,34 @@ class LoginViewController: UIViewController {
         return nil
     }
     
-    func showError(_ message: String) {
-        errorLabel.text = message
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    func transitionToTabBarVC(_ user: User?) {
+        guard let tabBarVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {
+               return
+        }
+        tabBarVC.user = user ?? User(loggedIn: true)
+        self.navigationController?.viewControllers[0] = tabBarVC
+        self.navigationController?.popToRootViewController(animated: true)
     }
-    
-    func transitionToCoursesVC() {
-        guard let coursesVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {return}
-        self.navigationController?.pushViewController(coursesVC, animated: true)
+
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        guard let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "signUpVC") as? SignUpViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
     @IBAction func logInButtonTapped(_ sender: Any) {
         
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
         // Validate fields
         let error = validateFields()
         
         if error != nil {
-            showError(error!)
+            showError(viewController: self, errorLabel: self.errorLabel, message: error!)
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+            
         }
         else {
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -71,29 +89,52 @@ class LoginViewController: UIViewController {
             // Sign In
             Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
             
-                if err != nil {
-                    self.showError(err!.localizedDescription)
+                if let err = err {
+                    showError(viewController: self, errorLabel: self.errorLabel, message: err.localizedDescription)
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
                 }
                 else {
-                // transition to CoursesVC
-                    self.transitionToCoursesVC()
+                    if let user = self.user {
+                        self.transitionToTabBarVC(user)
+                    } else {
+
+                        let db = Firestore.firestore()
+                        let collection = db.collection("users")
+                        let currentUser = Auth.auth().currentUser
+                        if let currentUser = currentUser {
+                            let uid = currentUser.uid // as String
+                            collection.whereField("uid", isEqualTo: uid).getDocuments { (document, error) in
+                                if let err = error {
+                                    showError(viewController: self, errorLabel: self.errorLabel, message: err.localizedDescription)
+                                    self.activityIndicator.stopAnimating()
+                                    self.activityIndicator.isHidden = true
+                                } else {
+                                    if let document = document {
+                                        let data = document.documents[0].data()
+                                        let firstName = data["firstname"] as! String
+                                        let lastName = data["lastname"] as! String
+                                        let email = currentUser.email!
+                                        self.user = User(loggedIn: true, firstName: firstName, lastName: lastName, email: email)
+                                        // it's not decoding from json-formatted db, because there's no email field in data, as well as loggedIn information. 
+                                        // to do init from decoder, has to change the db storing 
+
+                                        //self.transitionToTabBarVC(self.user)
+                                        guard let tabBarVC = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as? TabBarCoursesViewController else {
+                                            return
+                                        }
+                                        tabBarVC.user = self.user ?? User(loggedIn: true)
+                                        self.navigationController?.viewControllers[0] = tabBarVC
+                                    self.navigationController?.popToRootViewController(animated: true)
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
-        
-        
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension UIViewController {

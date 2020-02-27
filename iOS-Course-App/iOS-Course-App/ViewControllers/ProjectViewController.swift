@@ -12,8 +12,10 @@ import AVFoundation
 
 class ProjectViewController: UIViewController {
     
-    @IBOutlet weak var videoView: UIView!
+    var user: User?
     
+    @IBOutlet weak var videoView: UIView!
+    @IBOutlet weak var headerButton: UIButton!
     @IBOutlet weak var projectNameLabel: UILabel!
     @IBOutlet weak var projectDescriptionLabel: UILabel!
     @IBOutlet weak var gitRepositoryButton: UIButton!
@@ -21,11 +23,11 @@ class ProjectViewController: UIViewController {
     
     var projectInfo: Project?
     var player = AVPlayer()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupData()
-        self.title = "Project"
-        
+        setupElements()
     }
     
     func setupData() {
@@ -34,13 +36,39 @@ class ProjectViewController: UIViewController {
         }
         let courseYear = project.courseYear.components(separatedBy: "_");
         let year = courseYear[1] + "/" + courseYear[2]
-        projectNameLabel.text = project.name + " " + year
-        projectDescriptionLabel.text = project.description
+        self.projectNameLabel.text = project.name + " " + year
+        self.projectDescriptionLabel.text = project.description
+        self.title = "Project"
+    }
+    
+    func setupElements() {
+        if let user = self.user {
+            if user.loggedIn {
+                headerButton.setImage(UIImage(named: "profile"), for: .normal)
+            }
+        } else {
+            headerButton.setImage(UIImage(named: "login"), for: .normal)
+        }
+     }
+    
+    @IBAction func headerButtonTapped(_ sender: Any) {
+        guard let user = self.user, let loginVC = self.storyboard?.instantiateViewController(identifier: "loginVC") as? LoginViewController, let profileVC = self.storyboard?.instantiateViewController(identifier: "profileVC") as? ProfileViewController else {
+            return
+        }
+        
+        if user.loggedIn {
+            profileVC.user = self.user
+            self.navigationController?.pushViewController(profileVC, animated: true)
+        } else {
+            self.navigationController?.pushViewController(loginVC, animated: true)
+        }
     }
     
     @IBAction func gitRepositoryButtonTapped(
         _ sender: Any) {
-        let url = URL(string: projectInfo?.gitRepository ?? "github.com/SwiftFMI")!
+        let urlHeader = "http://github.com/SwiftFMI/"
+        let wholeUrl = urlHeader + (projectInfo?.gitRepository ?? "")
+        let url = URL(string: wholeUrl)!
         
         UIApplication.shared.canOpenURL(url)
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -50,31 +78,30 @@ class ProjectViewController: UIViewController {
         var videoUrl = URL(string: "")
         if let url = projectInfo?.videoUrl {
             if url != "" {
-                videoUrl = NSURL(string: url)! as URL
+                videoUrl = URL(string: url)!
             }
             else {
-               videoUrl = NSURL(string: "https://www.youtube.com/watch?v=nyp_PczrqFE")! as URL
+               videoUrl = URL(string: "https://devstreaming-cdn.apple.com/videos/app_store/app-store-product-page/hls_vod_mvp.m3u8")
             }
         } else {
-           videoUrl = NSURL(string: "https://devstreaming-cdn.apple.com/videos/app_store/app-store-product-page/hls_vod_mvp.m3u8")! as URL
+           videoUrl = URL(string: "https://www.youtube.com/watch?v=nyp_PczrqFE")
         }
-        
+ /*
         webView.configuration.allowsInlineMediaPlayback = true
         webView.configuration.mediaTypesRequiringUserActionForPlayback = []
         let request = URLRequest(url: videoUrl!)
         webView.load(request)
-  
-    /* alternative player, not supportin youtube
-         
-        let videoUrl = NSURL(string: projectInfo?.videoUrl ?? "https://devstreaming-cdn.apple.com/videos/app_store/app-store-product-page/hls_vod_mvp.m3u8")! as URL
-        player = AVPlayer(url: videoUrl)
+*/
+
+        // alternative player, not supporting youtube
+        player = AVPlayer(url: videoUrl!)
         let playerController = AVPlayerViewController()
         playerController.player = player
         self.showDetailViewController(playerController, sender: nil)
-      playerController.view.frame = self.view.frame
+        playerController.view.frame = self.view.frame
         self.view.addSubview(playerController.view)
         player.play()
-*/
+
     }
 
     override var prefersStatusBarHidden: Bool {
